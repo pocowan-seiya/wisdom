@@ -62,7 +62,7 @@ export default function StarterKitPage() {
                         step={1}
                         title="無限ビジョンナビ"
                         subtitle="Infinite Vision Navi"
-                        description="未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す。すでに実現した自分のエネルギーで、道が見えてきます。"
+                        description="未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す対話システム。すでに実現した自分のエネルギーで、道が見えてきます。"
                         icon={
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <circle cx="12" cy="12" r="3" />
