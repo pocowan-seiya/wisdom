@@ -24,7 +24,7 @@ export default function GuidePage() {
             accentBg: "linear-gradient(135deg, #FDF6EE 0%, #F8EDE0 100%)",
             href: "/vision-navi",
             videoId: "",
-            audioUrl: "",
+            audioUrl: "https://lpcolorful.com/product/wp-content/uploads/2026/02/line-system01.mp3",
         },
         {
             id: "limit-detector",
@@ -37,7 +37,7 @@ export default function GuidePage() {
             accentBg: "linear-gradient(135deg, #F0F2FC 0%, #E4E8FA 100%)",
             href: "/limit-detector",
             videoId: "",
-            audioUrl: "",
+            audioUrl: "https://lpcolorful.com/product/wp-content/uploads/2026/02/line-system2.m4a",
         },
         {
             id: "letting-go",

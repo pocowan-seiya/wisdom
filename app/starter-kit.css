@@ -2,24 +2,28 @@
 
 .sk-layout {
     font-family: var(--font-noto-sans-jp), var(--font-inter), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
-    color: #2D2D2D;
-    background: #FAFAFA;
+    color: #1A202C;
+    background: #F8FAFC;
     min-height: 100vh;
+    position: relative;
 }
 
 /* ---- Landing Page ---- */
 
 .sk-landing {
     min-height: 100vh;
-    background: #FAFAFA;
+    background: radial-gradient(circle at 50% 0%, #FFFFFF 0%, #F1F5F9 100%);
+    position: relative;
+    z-index: 1;
 }
 
 .sk-hero {
     position: relative;
     text-align: center;
-    padding: 100px 24px 60px;
+    padding: 60px 24px 36px;
     overflow: hidden;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F8F6F3 100%);
+    background: transparent;
+    z-index: 2;
 }
 
 .sk-hero-glow {
@@ -33,17 +37,36 @@
 }
 
 .sk-hero-glow-1 {
-    top: -100px;
-    left: -80px;
-    background: #D4A574;
-    animation: sk-glow-drift 12s ease-in-out infinite alternate;
+    top: -150px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: #00E5FF;
+    filter: blur(150px);
+    opacity: 0.08;
+    animation: sk-glow-drift 15s ease-in-out infinite alternate;
+}
+
+.sk-hero-glow-3 {
+    top: 20%;
+    left: 40%;
+    width: 500px;
+    height: 500px;
+    background: #FDE047;
+    filter: blur(140px);
+    opacity: 0.05;
+    animation: sk-glow-drift 20s ease-in-out infinite alternate;
 }
 
 .sk-hero-glow-2 {
-    bottom: -80px;
-    right: -60px;
-    background: #7B8CDE;
-    animation: sk-glow-drift 14s ease-in-out infinite alternate-reverse;
+    bottom: -150px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    background: #8B5CF6;
+    filter: blur(160px);
+    opacity: 0.06;
+    animation: sk-glow-drift 18s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes sk-glow-drift {
@@ -66,23 +89,24 @@
 .sk-hero-eyebrow {
     font-family: var(--font-inter), sans-serif;
     font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 3px;
+    font-weight: 600;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: #B0A090;
-    margin-bottom: 16px;
+    color: #64748B;
+    margin-bottom: 20px;
 }
 
 .sk-hero-title {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: #1A1A1A;
-    margin-bottom: 24px;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    color: #0F172A;
+    margin-bottom: 20px;
 }
 
 .sk-hero-title-accent {
-    background: linear-gradient(135deg, #D4A574 0%, #7B8CDE 100%);
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -90,9 +114,10 @@
 
 .sk-hero-description {
     font-size: 15px;
-    line-height: 1.9;
-    color: #666;
-    font-weight: 300;
+    line-height: 2;
+    color: #475569;
+    font-weight: 400;
+    letter-spacing: 0.05em;
 }
 
 /* ---- Cards ---- */
@@ -111,33 +136,36 @@
 .sk-prep-card {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 24px 28px;
-    background: linear-gradient(135deg, #F5F0FA 0%, #EDE6F5 100%);
-    border: 1px solid #D8CCE8;
-    border-radius: 16px;
+    gap: 24px;
+    padding: 28px 32px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.03);
 }
 
 .sk-prep-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(184, 169, 201, 0.25);
-    border-color: #B8A9C9;
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(139, 92, 246, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .sk-prep-card-icon {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #B8A9C9;
+    background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
     color: #fff;
-    border-radius: 12px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
 }
 
 .sk-prep-card-content {
@@ -148,20 +176,21 @@
 .sk-prep-card-label {
     display: inline-block;
     font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: #B8A9C9;
-    background: rgba(184, 169, 201, 0.15);
-    padding: 3px 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #7C3AED;
+    background: rgba(139, 92, 246, 0.1);
+    padding: 4px 12px;
     border-radius: 20px;
     margin-bottom: 8px;
 }
 
 .sk-prep-card-title {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 700;
+    letter-spacing: 0.05em;
     margin: 0 0 6px 0;
-    color: #2D2D2D;
+    color: #0F172A;
 }
 
 .sk-prep-card-desc {
@@ -199,20 +228,23 @@
 
 .sk-card {
     position: relative;
-    background: #FFFFFF;
-    border: 1px solid #F0EDE8;
-    border-radius: 20px;
-    padding: 40px 28px 32px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 44px 32px 36px;
     text-align: center;
-    transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .sk-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
-    border-color: var(--card-accent-light);
+    transform: translateY(-8px);
+    box-shadow: 0 24px 64px rgba(15, 23, 42, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
 }
 
 .sk-card-disabled {
@@ -260,10 +292,11 @@
 }
 
 .sk-card-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1A1A1A;
-    margin-bottom: 6px;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #0F172A;
+    margin-bottom: 8px;
 }
 
 .sk-card-subtitle {
@@ -276,11 +309,11 @@
 }
 
 .sk-card-description {
-    font-size: 13.5px;
-    line-height: 1.8;
-    color: #777;
-    font-weight: 300;
-    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #64748B;
+    font-weight: 400;
+    margin-bottom: 24px;
 }
 
 .sk-card-cta {
@@ -870,16 +903,30 @@
 
 @media (max-width: 640px) {
     .sk-hero {
-        padding: 72px 20px 48px;
-    }
+    position: relative;
+    text-align: center;
+    padding: 60px 24px 36px;
+    overflow: hidden;
+    background: transparent;
+    z-index: 2;
+}
 
     .sk-hero-title {
-        font-size: 30px;
-    }
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    color: #0F172A;
+    margin-bottom: 20px;
+}
 
     .sk-hero-description {
-        font-size: 14px;
-    }
+    font-size: 15px;
+    line-height: 2;
+    color: #475569;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
 
     .sk-cards-section {
         padding: 12px 16px 60px;
@@ -1326,39 +1373,42 @@
 
 .sk-guide-banner {
     max-width: 1100px;
-    margin: -20px auto 0;
-    padding: 0 24px;
+    margin: 0 auto;
+    padding: 16px 24px 8px;
 }
 
 .sk-guide-banner-link {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 18px 24px;
-    background: linear-gradient(135deg, #FFFBF5 0%, #FFF8EE 50%, #F8F4FF 100%);
-    border: 1px solid #E8DFD0;
-    border-radius: 14px;
+    padding: 20px 28px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
 }
 
 .sk-guide-banner-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(212, 165, 116, 0.15);
-    border-color: #D4C0A8;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .sk-guide-banner-badge {
     flex-shrink: 0;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: #fff;
-    background: linear-gradient(135deg, #D4A574, #B8A9C9);
-    padding: 5px 14px;
+    background: linear-gradient(135deg, #3B82F6, #8B5CF6);
+    padding: 6px 16px;
     border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
 .sk-guide-banner-text {
@@ -1381,9 +1431,20 @@
 
 @media (max-width: 600px) {
     .sk-guide-banner-link {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 28px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+}
 
     .sk-guide-banner-text {
         font-size: 13px;
