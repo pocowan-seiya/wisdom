@@ -317,6 +317,13 @@ export default function GuidedChatUI({
                     </span>
                     <h1>{systemName}</h1>
                 </div>
+                <a href="/guide" className="sk-chat-guide-link" title="使い方ガイド" onClick={(e) => e.stopPropagation()}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                    <span>ガイド</span>
+                </a>
                 <div className="gw-progress-track" style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
                     <div
                         className="gw-progress-fill"
