@@ -134,10 +134,7 @@ export default function GuidedWorkUI({ steps, accentColor, onComplete }: GuidedW
         >
             <div className="sk-bg-glow sk-bg-glow-1" />
             <div className="sk-bg-glow sk-bg-glow-2" />
-            <div className="sk-bg-glow sk-bg-glow-3" /> {
-                if (step.inputType === "tap") goNext();
-            }}
-        >
+            <div className="sk-bg-glow sk-bg-glow-3" />
             {/* Header */}
             <div className="gw-header">
                 <button className="gw-back-btn" onClick={(e) => { e.stopPropagation(); goBack(); }}>
