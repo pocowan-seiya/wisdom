@@ -17,7 +17,7 @@ export default function StarterKitPage() {
                     <p className="sk-hero-description">
                         あなたの無限の可能性を解き放つ、3つのAI対話システム。
                         <br />
-                        ビジョンを描き、制限を見つけ、手放していく。
+                        ビジョンを見て、制限を見つけ、手放していく。
                         <br />
                         ステップ順に進むのがおすすめですが、直感で選ぶのもOKです。
                     </p>
@@ -50,7 +50,7 @@ export default function StarterKitPage() {
                             <h3 className="sk-prep-card-title">映写機の場所に立つ</h3>
                             <p className="sk-prep-card-desc">
                                 各システムを使う前に、あなたの真実の場所「映写機の場所」に立ち、
-                                宇宙意識とつながる準備をします。
+                                あなたの宇宙意識とつながる準備をします。
                             </p>
                         </div>
                         <div className="sk-prep-card-arrow">→</div>
@@ -62,7 +62,7 @@ export default function StarterKitPage() {
                         step={1}
                         title="無限ビジョンナビ"
                         subtitle="Infinite Vision Navi"
-                        description="未来から逆算して、あなただけのビジョンを高解像度で描き出します。体感に没入し、実現した自分から道を見つけましょう。"
+                        description="未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す。すでに実現した自分のエネルギーで、道が見えてきます。"
                         icon={
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <circle cx="12" cy="12" r="3" />
@@ -77,7 +77,7 @@ export default function StarterKitPage() {
                         step={2}
                         title="リミットディテクター"
                         subtitle="Limit Detector"
-                        description="あなたが無意識に持っている「制限」を映し出し、分離のパターンに気づくための対話システムです。"
+                        description="あなたが無意識に持っている「制限」を映し出し、あなたがつかっている自分への分離に気づく対話システムです。"
                         icon={
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
@@ -92,7 +92,7 @@ export default function StarterKitPage() {
                         step={3}
                         title="手放しワークシステム"
                         subtitle="Letting Go Work System"
-                        description="捉えた制限や不要なエネルギーを手放し、本来の光に戻すためのワークシステムです。"
+                        description="捉えた制限やエネルギーを、ありえないほどのシンプルさと簡単さで手放し、無限の可能性のじぶんに復活していくワークシステムです。"
                         icon={
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
