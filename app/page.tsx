@@ -12,7 +12,7 @@ export default function StarterKitPage() {
                     <h1 className="sk-hero-title">
                         無限の叡智
                         <br />
-                        <span className="sk-hero-title-accent">スターターキット</span>
+                        スターターキット
                     </h1>
                     <p className="sk-hero-description">
                         あなたの無限の可能性を解き放つ、3つのAI対話システム。

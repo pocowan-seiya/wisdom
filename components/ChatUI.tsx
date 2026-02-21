@@ -126,8 +126,13 @@ export default function ChatUI({
                     setMessages([{ role: "assistant", content: fullText }]);
                 }
             } catch (error) {
-                console.error("Greeting error:", error);
-                const fallback = error instanceof Error && error.message === "rate_limit"
+                const isRateLimit = error instanceof Error && error.message === "rate_limit";
+                if (isRateLimit) {
+                    console.warn("API rate limit reached, showing fallback greeting.");
+                } else {
+                    console.error("Greeting error:", error);
+                }
+                const fallback = isRateLimit
                     ? "現在APIの利用制限に達しています。しばらくお待ちいただくか、APIキーの設定をご確認ください。"
                     : "こんにちは。対話を始めましょう。今、あなたが一番気になっていることは何ですか？";
                 setMessages([
@@ -332,6 +337,9 @@ export default function ChatUI({
 
     return (
         <div className="sk-chat-container">
+            <div className="sk-bg-glow sk-bg-glow-1" style={{ position: 'absolute', zIndex: 0 }} />
+            <div className="sk-bg-glow sk-bg-glow-2" style={{ position: 'absolute', zIndex: 0 }} />
+            <div className="sk-bg-glow sk-bg-glow-3" style={{ position: 'absolute', zIndex: 0 }} />
             {/* Header */}
             <div className="sk-chat-header" style={{ borderBottomColor: accentColorLight }}>
                 <a href="/" className="sk-chat-back">

@@ -1,5 +1,23 @@
 /* ===== Starter Kit ===== */
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    /* Prevent body scroll so only internal containers scroll */
+    max-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
 .sk-layout {
     font-family: var(--font-noto-sans-jp), var(--font-inter), "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
     color: #1A202C;
@@ -97,12 +115,16 @@
 }
 
 .sk-hero-title {
-    font-size: 38px;
-    font-weight: 800;
-    line-height: 1.4;
+    font-family: "Shippori Mincho", "Noto Serif JP", serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.3;
     letter-spacing: 0.08em;
-    color: #0F172A;
-    margin-bottom: 20px;
+    background: linear-gradient(to right, #2C2C54 0%, #766589 45%, #C2A571 85%, #D4B98E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 32px;
 }
 
 .sk-hero-title-accent {
@@ -113,10 +135,10 @@
 }
 
 .sk-hero-description {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 2;
     color: #475569;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0.05em;
 }
 
@@ -228,23 +250,49 @@
 
 .sk-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border: 1.5px solid rgba(255, 255, 255, 0.95);
     border-radius: 24px;
     padding: 44px 32px 36px;
     text-align: center;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 8px 32px rgba(15, 23, 42, 0.07),
+        0 2px 8px rgba(15, 23, 42, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.sk-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-accent, #D4A574);
+    opacity: 0.6;
+    border-radius: 24px 24px 0 0;
+    transition: opacity 0.4s ease;
 }
 
 .sk-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 24px 64px rgba(15, 23, 42, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 1);
-    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-8px) scale(1.01);
+    box-shadow:
+        0 24px 64px rgba(15, 23, 42, 0.10),
+        0 8px 24px rgba(15, 23, 42, 0.06),
+        0 0 0 1px rgba(255, 255, 255, 1),
+        0 0 60px -10px var(--card-accent, rgba(212, 165, 116, 0.15));
+    background: rgba(255, 255, 255, 0.95);
     border-color: rgba(255, 255, 255, 1);
+}
+
+.sk-card:hover::before {
+    opacity: 1;
 }
 
 .sk-card-disabled {
@@ -273,10 +321,11 @@
 .sk-card-step {
     font-family: var(--font-inter), sans-serif;
     font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #C0B8AD;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--card-accent, #C0B8AD);
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .sk-card-icon {
@@ -286,9 +335,16 @@
     margin: 0 auto 20px;
     width: 64px;
     height: 64px;
-    border-radius: 16px;
-    background: var(--card-accent-light);
+    border-radius: 18px;
+    background: color-mix(in srgb, var(--card-accent) 20%, white);
     color: var(--card-accent);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease;
+}
+
+.sk-card:hover .sk-card-icon {
+    transform: scale(1.08);
+    /* slight bounce */
+    background: color-mix(in srgb, var(--card-accent) 30%, white);
 }
 
 .sk-card-title {
@@ -302,10 +358,11 @@
 .sk-card-subtitle {
     font-family: var(--font-inter), sans-serif;
     font-size: 12px;
-    color: #B0A8A0;
-    font-weight: 400;
+    color: var(--card-accent, #B0A8A0);
+    font-weight: 500;
     letter-spacing: 0.5px;
     margin-bottom: 16px;
+    opacity: 0.7;
 }
 
 .sk-card-description {
@@ -318,13 +375,18 @@
 
 .sk-card-cta {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.5px;
-    transition: opacity 0.2s;
+    color: var(--card-accent, #D4A574);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .sk-card:hover .sk-card-cta {
-    opacity: 0.8;
+    letter-spacing: 1px;
+    gap: 8px;
 }
 
 /* ---- Footer ---- */
@@ -341,34 +403,45 @@
 
 .sk-chat-container {
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    max-height: 100dvh;
-    background: #FAFAFA;
+    height: 100dvh;
+    background: transparent;
 }
 
 .sk-chat-header {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     gap: 16px;
     padding: 16px 24px;
-    background: #FFFFFF;
-    border-bottom: 1px solid #F0EDE8;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     flex-shrink: 0;
+}
+
+.sk-chat-header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
 }
 
 .sk-chat-back {
     font-size: 14px;
-    color: #999;
+    color: #666;
     text-decoration: none;
     transition: color 0.2s;
     flex-shrink: 0;
 }
 
 .sk-chat-back:hover {
-    color: #555;
+    color: #333;
 }
 
 .sk-chat-header-title {
@@ -383,7 +456,8 @@
     align-items: center;
 }
 
-.sk-chat-header-title h1 {
+.sk-chat-header-title h1,
+.sk-chat-header-content h1 {
     font-size: 16px;
     font-weight: 600;
     color: #1A1A1A;
@@ -393,7 +467,10 @@
 /* Messages area */
 
 .sk-chat-messages {
+    position: relative;
+    z-index: 10;
     flex: 1;
+    min-height: 0;
     overflow-y: auto;
     padding: 32px 24px;
     display: flex;
@@ -463,16 +540,21 @@
 }
 
 .sk-bubble-ai {
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     color: #333;
-    border: 1px solid #F0EDE8;
+    border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 18px 18px 18px 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
 }
 
 .sk-bubble-user {
     border-radius: 18px 18px 4px 18px;
     color: #FFF;
+    background: var(--accent-color, #9DB5A0);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 /* Typing animation */
@@ -517,11 +599,22 @@
 
 /* Input */
 
+.sk-chat-input-area {
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+    width: 100%;
+}
+
 .sk-chat-input-form {
     padding: 16px 24px 24px;
-    background: #FFFFFF;
-    border-top: 1px solid #F0EDE8;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .sk-chat-input-wrapper {
@@ -530,16 +623,18 @@
     gap: 10px;
     max-width: 680px;
     margin: 0 auto;
-    background: #F8F6F3;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     padding: 8px 8px 8px 18px;
-    border: 1px solid #EEEBE6;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: border-color 0.2s, box-shadow 0.2s;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .sk-chat-input-wrapper:focus-within {
-    border-color: #D4C8B8;
-    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.08);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
 }
 
 .sk-chat-input {
@@ -557,7 +652,7 @@
 }
 
 .sk-chat-input::placeholder {
-    color: #C0B8AD;
+    color: #999;
 }
 
 .sk-chat-send {
@@ -565,7 +660,7 @@
     height: 40px;
     border-radius: 12px;
     border: none;
-    background: #DDD;
+    background: rgba(0, 0, 0, 0.1);
     color: #FFF;
     display: flex;
     align-items: center;
@@ -582,9 +677,11 @@
 
 .sk-chat-send:disabled {
     cursor: default;
-    background: #E8E4DF;
-    color: #C0B8AD;
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* ---- Coming Soon ---- */
 
@@ -683,14 +780,23 @@
 /* ---- Body Layout: Chat + Side Panel ---- */
 
 .gc-body-layout {
-    display: flex;
     flex: 1;
+    min-height: 0;
+    display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .gc-body-layout>.sk-chat-messages {
+    position: relative;
+    z-index: 10;
     flex: 1;
-    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* Desktop side panel */
@@ -704,7 +810,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 380px;
+        width: 480px;
         flex-shrink: 0;
         padding: 32px 24px;
         border-left: 1px solid rgba(0, 0, 0, 0.04);
@@ -905,40 +1011,61 @@
 
 @media (max-width: 640px) {
     .sk-hero {
-    position: relative;
-    text-align: center;
-    padding: 60px 24px 36px;
-    overflow: hidden;
-    background: transparent;
-    z-index: 2;
-}
+        position: relative;
+        text-align: center;
+        padding: 60px 24px 36px;
+        overflow: hidden;
+        background: transparent;
+        z-index: 2;
+    }
 
     .sk-hero-title {
-    font-size: 38px;
-    font-weight: 800;
-    line-height: 1.4;
-    letter-spacing: 0.08em;
-    color: #0F172A;
-    margin-bottom: 20px;
-}
+        font-family: "Shippori Mincho", "Noto Serif JP", serif;
+        font-size: 44px;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: 0.05em;
+        background: linear-gradient(to right, #2C2C54 0%, #766589 45%, #C2A571 85%, #D4B98E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 24px;
+    }
 
     .sk-hero-description {
-    font-size: 15px;
-    line-height: 2;
-    color: #475569;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-}
+        font-size: 16px;
+        line-height: 1.8;
+        color: #475569;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
 
     .sk-cards-section {
         padding: 12px 16px 60px;
     }
 
     .sk-chat-messages {
-        padding: 20px 16px;
+        position: relative;
+        z-index: 10;
+        flex: 1;
+        min-height: 0;
+        overflow-y: auto;
+        padding: 32px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .sk-chat-input-form {
+        position: relative;
+        z-index: 10;
+        padding: 16px 24px 24px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+        flex-shrink: 0;
+
         padding: 12px 16px 20px;
     }
 
@@ -957,21 +1084,30 @@
 
 .gw-container {
     position: fixed;
-    overflow: hidden;
-    z-index: 100;
-    position: fixed;
     inset: 0;
-    background: linear-gradient(160deg, #f8f9fa 0%, #eef1f5 30%, #f0f5f1 60%, #f5f3ee 100%);
+    overflow-y: auto;
+    z-index: 100;
+    background: #FAFAFA;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
-    z-index: 100;
-    overflow-y: auto;
 }
 
 .gw-header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    flex-shrink: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1015,6 +1151,12 @@
 }
 
 .gw-progress-track {
+    position: relative;
+    z-index: 10;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.06);
+    flex-shrink: 0;
+
     height: 3px;
     background: rgba(0, 0, 0, 0.06);
     flex-shrink: 0;
@@ -1029,6 +1171,19 @@
 /* Content */
 
 .gw-content {
+    position: relative;
+    z-index: 10;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px 80px;
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1105,6 +1260,18 @@
 }
 
 .gw-select-btn {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+
     background: #fff;
     border: 2px solid;
     border-radius: 12px;
@@ -1131,6 +1298,18 @@
 }
 
 .gw-text-input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    outline: none;
+    transition: border-color 0.2s;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+
     flex: 1;
     padding: 14px 20px;
     border: 2px solid rgba(0, 0, 0, 0.1);
@@ -1170,6 +1349,17 @@
 /* Tap hint */
 
 .gw-tap-hint {
+    position: fixed;
+    z-index: 20;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.5;
+    animation: gwPulse 2.5s ease-in-out infinite;
+
     position: fixed;
     bottom: 40px;
     left: 50%;
@@ -1257,6 +1447,19 @@
 
 @media (max-width: 600px) {
     .gw-content {
+        position: relative;
+        z-index: 10;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 32px 80px;
+        max-width: 640px;
+        margin: 0 auto;
+        width: 100%;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+
         padding: 24px 20px 80px;
     }
 
@@ -1274,6 +1477,17 @@
     }
 
     .gw-tap-hint {
+        position: fixed;
+        z-index: 20;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        opacity: 0.5;
+        animation: gwPulse 2.5s ease-in-out infinite;
+
         bottom: 28px;
     }
 }
@@ -1283,6 +1497,17 @@
    ======================================== */
 
 .gc-tap-bar {
+    position: relative;
+    z-index: 10;
+    padding: 16px 24px;
+    text-align: center;
+    cursor: pointer;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    transition: background 0.2s;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
     padding: 16px 24px;
     text-align: center;
     cursor: pointer;
@@ -1314,6 +1539,18 @@
 }
 
 .gc-select-bar {
+    position: relative;
+    z-index: 10;
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
     padding: 16px 24px;
     display: flex;
     flex-wrap: wrap;
@@ -1339,6 +1576,19 @@
 }
 
 .gc-complete-bar {
+    position: relative;
+    z-index: 10;
+    padding: 20px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
     padding: 20px 24px;
     text-align: center;
     border-top: 1px solid;
@@ -1436,20 +1686,20 @@
 
 @media (max-width: 600px) {
     .sk-guide-banner-link {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 28px;
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 16px;
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
-}
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 20px 28px;
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+    }
 
     .sk-guide-banner-text {
         font-size: 13px;
@@ -1777,4 +2027,39 @@
     .guide-section-title {
         font-size: 20px;
     }
+}
+
+.sk-chat-input-area {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+}
+
+.gc-side-panel {
+    position: relative;
+    z-index: 10;
+}
+
+.sk-chat-header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.sk-bubble-ai {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.sk-bubble-user {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
