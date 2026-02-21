@@ -5,8 +5,8 @@ export default function StarterKitPage() {
         <main className="sk-landing">
             {/* Hero */}
             <section className="sk-hero">
-                <div className="sk-hero-glow sk-hero-glow-1" />
-                <div className="sk-hero-glow sk-hero-glow-2" />
+                <div className="sk-bg-glow sk-bg-glow-1" />
+                <div className="sk-bg-glow sk-bg-glow-2" />
                 <div className="sk-hero-content">
                     <p className="sk-hero-eyebrow">Infinite Wisdom</p>
                     <h1 className="sk-hero-title">

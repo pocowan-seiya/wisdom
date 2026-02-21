@@ -55,7 +55,10 @@ export default function GuidePage() {
     ];
 
     return (
-        <main className="guide-page">
+        <main className="guide-page" style={{ position: "relative", overflow: "hidden" }}>
+            <div className="sk-bg-glow sk-bg-glow-1" />
+            <div className="sk-bg-glow sk-bg-glow-2" />
+            <div className="sk-bg-glow sk-bg-glow-3" />
             {/* Hero */}
             <section className="guide-hero">
                 <a href="/" className="guide-back">← ホームに戻る</a>

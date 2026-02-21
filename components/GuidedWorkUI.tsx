@@ -95,6 +95,9 @@ export default function GuidedWorkUI({ steps, accentColor, onComplete }: GuidedW
     if (isCompleted) {
         return (
             <div className="gw-container">
+                <div className="sk-bg-glow sk-bg-glow-1" />
+                <div className="sk-bg-glow sk-bg-glow-2" />
+                <div className="sk-bg-glow sk-bg-glow-3" />
                 <div className="gw-complete">
                     <div className="gw-complete-icon">✨</div>
                     <h2 className="gw-complete-title">ワーク完了</h2>
@@ -126,6 +129,12 @@ export default function GuidedWorkUI({ steps, accentColor, onComplete }: GuidedW
         <div
             className="gw-container"
             onClick={() => {
+                if (step.inputType === "tap") goNext();
+            }}
+        >
+            <div className="sk-bg-glow sk-bg-glow-1" />
+            <div className="sk-bg-glow sk-bg-glow-2" />
+            <div className="sk-bg-glow sk-bg-glow-3" /> {
                 if (step.inputType === "tap") goNext();
             }}
         >

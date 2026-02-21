@@ -303,6 +303,9 @@ export default function GuidedChatUI({
 
     return (
         <div className="sk-chat-container">
+            <div className="sk-bg-glow sk-bg-glow-1" />
+            <div className="sk-bg-glow sk-bg-glow-2" />
+            <div className="sk-bg-glow sk-bg-glow-3" />
             {/* Header */}
             <div className="sk-chat-header" style={{ borderBottomColor: accentColorLight }}>
                 <div className="sk-chat-header-content">
