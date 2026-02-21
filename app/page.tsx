@@ -24,6 +24,17 @@ export default function StarterKitPage() {
                 </div>
             </section>
 
+            {/* Guide Banner */}
+            <section className="sk-guide-banner">
+                <a href="/guide" className="sk-guide-banner-link">
+                    <span className="sk-guide-banner-badge">はじめての方へ</span>
+                    <span className="sk-guide-banner-text">
+                        使い方ガイド — 動画・音声でワークの流れを確認できます
+                    </span>
+                    <span className="sk-guide-banner-arrow">→</span>
+                </a>
+            </section>
+
             {/* Cards */}
             <section className="sk-cards-section">
                 {/* Preparation */}
