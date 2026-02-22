@@ -136,7 +136,7 @@ export default function StarterKitPage() {
                             それをいとも簡単に手放してしまう。
                         </p>
                         <p>
-                            手放せるとも思っていないほど、じぶんが自分につけた深い重しだからこそ、
+                            手放せるとも思っていないほど、じぶんが自分につけた深い重しが外れ、
                             <br />
                             開いていく扉、広がって上昇する自分への復活はとてつもない。
                             <br />
@@ -145,7 +145,9 @@ export default function StarterKitPage() {
                         <p className="sk-promo-highlight">
                             文字通り、もともとの — 無限の可能性の、制限のない自分。
                             <br />
-                            やりたいことは何でもできる、そのあなたへの復活の時空間をあなたのために使ってください。
+                            やりたいことは何でもできる、そのあなたへの復活の時空間を
+                            <br />
+                            あなたのために使ってください。
                         </p>
                     </div>
                     <div className="sk-promo-cta-area">
