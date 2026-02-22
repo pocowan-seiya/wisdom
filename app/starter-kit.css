@@ -424,6 +424,100 @@ body {
     gap: 8px;
 }
 
+/* ---- Spaceship Class Promo ---- */
+
+.sk-promo-section {
+    padding: 64px 24px;
+    background: linear-gradient(180deg, #FAFAFA 0%, #F5F0FA 50%, #FAFAFA 100%);
+}
+
+.sk-promo-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sk-promo-eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #B8A9C9;
+    margin-bottom: 16px;
+}
+
+.sk-promo-title {
+    font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    color: #2C2C54;
+    margin-bottom: 40px;
+}
+
+.sk-promo-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.sk-promo-body p {
+    font-size: 15px;
+    line-height: 2;
+    color: #475569;
+    letter-spacing: 0.04em;
+}
+
+.sk-promo-highlight {
+    font-weight: 600;
+    font-size: 16px !important;
+    color: #334155 !important;
+    background: linear-gradient(to right, #2C2C54 0%, #766589 50%, #C2A571 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sk-promo-cta-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.sk-promo-price {
+    font-size: 15px;
+    color: #64748B;
+    letter-spacing: 0.08em;
+}
+
+.sk-promo-price span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2C2C54;
+    font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+}
+
+.sk-promo-btn {
+    display: inline-block;
+    padding: 14px 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #B8A9C9 0%, #9688B0 100%);
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(150, 136, 176, 0.3);
+}
+
+.sk-promo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(150, 136, 176, 0.4);
+}
+
 /* ---- Footer ---- */
 
 .sk-footer {

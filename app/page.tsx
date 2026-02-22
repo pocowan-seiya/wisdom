@@ -115,6 +115,53 @@ export default function StarterKitPage() {
                 </div>
             </section>
 
+            {/* Spaceship Class Promo */}
+            <section className="sk-promo-section">
+                <div className="sk-promo-inner">
+                    <p className="sk-promo-eyebrow">✨ さらに深く</p>
+                    <h2 className="sk-promo-title">関野あやこ<br />スペースシップクラス</h2>
+                    <div className="sk-promo-body">
+                        <p>
+                            自分では思ってもみなかったような、深い深い前世や魂レベルの、
+                            <br />
+                            使い古してなじみ深い — だからこそ自分には到底気づけないような
+                            <br />
+                            「自分が自分にしている分離」。
+                        </p>
+                        <p>
+                            このクラスの安定した、圧倒的な磁場 —
+                            <br />
+                            地球の体験とは思えないほどの空間で、
+                            <br />
+                            それをいとも簡単に手放してしまう。
+                        </p>
+                        <p>
+                            手放していくものが自分のすぐ近くにあるからこそ、
+                            <br />
+                            その分だけ開いていく扉、広がっていくとてつもない自分の復活。
+                            <br />
+                            意識が上昇して、ほんとうの自分で生きることが始まっていきます。
+                        </p>
+                        <p className="sk-promo-highlight">
+                            文字通り、もともとの — 無限の可能性の、制限のない自分。
+                            <br />
+                            やりたいことは何でもできる、その意識の空間をあなたのために使ってください。
+                        </p>
+                    </div>
+                    <div className="sk-promo-cta-area">
+                        <p className="sk-promo-price">Zoom体験 <span>5,500</span>円</p>
+                        <a
+                            href="https://reservestock.jp/inquiry/MTQ0NDE5MzdiZm"
+                            target="_blank"
+                            rel="noopener"
+                            className="sk-promo-btn"
+                        >
+                            詳細はこちら →
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             {/* Footer */}
             <footer className="sk-footer">
                 <p>© 2026 無限の叡智スターターキット</p>
