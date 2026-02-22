@@ -1795,6 +1795,73 @@ body {
 }
 
 /* ===== Guide Banner (Home Page) ===== */
+/* ---- Introduction Banner ---- */
+
+.sk-intro-banner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 8px;
+}
+
+.sk-intro-banner-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 28px;
+    background: linear-gradient(135deg, rgba(255, 248, 235, 0.8) 0%, rgba(245, 240, 250, 0.6) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(194, 165, 113, 0.2);
+    border-radius: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 24px rgba(194, 165, 113, 0.08);
+}
+
+.sk-intro-banner-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(194, 165, 113, 0.15);
+    border-color: rgba(194, 165, 113, 0.35);
+}
+
+.sk-intro-banner-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.sk-intro-banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.sk-intro-banner-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2C2C54;
+    letter-spacing: 0.06em;
+}
+
+.sk-intro-banner-desc {
+    font-size: 13px;
+    color: #8B7355;
+    letter-spacing: 0.04em;
+}
+
+.sk-intro-banner-arrow {
+    font-size: 18px;
+    color: #C2A571;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.sk-intro-banner-link:hover .sk-intro-banner-arrow {
+    transform: translateX(4px);
+}
+
+/* ---- Guide Banner ---- */
 
 .sk-guide-banner {
     max-width: 1100px;

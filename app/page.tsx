@@ -32,6 +32,20 @@ export default function StarterKitPage() {
                 </div>
             </section>
 
+            {/* Introduction Story */}
+            <section className="sk-intro-banner">
+                <a href="/introduction" className="sk-intro-banner-link">
+                    <span className="sk-intro-banner-icon">🌕</span>
+                    <div className="sk-intro-banner-content">
+                        <span className="sk-intro-banner-title">イントロダクション</span>
+                        <span className="sk-intro-banner-desc">
+                            ぼくたちの意識の旅 — なぜ地球に来て、今何が始まっているのか
+                        </span>
+                    </div>
+                    <span className="sk-intro-banner-arrow">→</span>
+                </a>
+            </section>
+
             {/* Guide Banner */}
             <section className="sk-guide-banner">
                 <a href="/guide" className="sk-guide-banner-link">
