@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 
 interface WorkStep {
     id: string;
@@ -60,6 +61,7 @@ export default function GuidedChatUI({
     steps,
     completionMessage,
 }: GuidedChatUIProps) {
+    const pathname = usePathname();
     const [currentStepIndex, setCurrentStepIndex] = useState(0);
     const [visibleMessages, setVisibleMessages] = useState<
         { role: "assistant" | "user"; content: string; image?: WorkStep["image"] }[]
@@ -317,7 +319,7 @@ export default function GuidedChatUI({
                     </span>
                     <h1>{systemName}</h1>
                 </div>
-                <a href="/guide" className="sk-chat-guide-link" title="使い方ガイド" onClick={(e) => e.stopPropagation()}>
+                <a href={`/guide#${pathname.replace('/', '')}`} className="sk-chat-guide-link" title="使い方ガイド" onClick={(e) => e.stopPropagation()}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                         <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />

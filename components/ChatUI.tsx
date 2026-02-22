@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 
 interface Message {
     role: "user" | "assistant";
@@ -61,6 +62,7 @@ export default function ChatUI({
     icon,
     guideImage,
 }: ChatUIProps) {
+    const pathname = usePathname();
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
@@ -351,7 +353,7 @@ export default function ChatUI({
                     </span>
                     <h1>{systemName}</h1>
                 </div>
-                <a href="/guide" className="sk-chat-guide-link" title="使い方ガイド" onClick={(e) => e.stopPropagation()}>
+                <a href={`/guide#${pathname.replace('/', '')}`} className="sk-chat-guide-link" title="使い方ガイド" onClick={(e) => e.stopPropagation()}>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
                         <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />

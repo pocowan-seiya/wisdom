@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 
 interface WorkStep {
     id: string;
@@ -19,6 +20,7 @@ interface GuidedWorkUIProps {
 }
 
 export default function GuidedWorkUI({ steps, accentColor, onComplete }: GuidedWorkUIProps) {
+    const pathname = usePathname();
     const [currentStep, setCurrentStep] = useState(0);
     const [answers, setAnswers] = useState<Record<string, string>>({});
     const [textInput, setTextInput] = useState("");
@@ -145,7 +147,7 @@ export default function GuidedWorkUI({ steps, accentColor, onComplete }: GuidedW
                 </span>
                 <div className="gw-header-actions">
                     <a
-                        href="/guide"
+                        href={`/guide#${pathname.replace('/', '')}`}
                         className="sk-chat-guide-link"
                         title="使い方ガイド"
                         onClick={(e) => e.stopPropagation()}
