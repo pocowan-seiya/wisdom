@@ -6,12 +6,14 @@ export default function GuidePage() {
             title: "映写機の場所に立つ",
             subtitle: "準備ワーク",
             description:
-                "各システムを使う前に、まず「映写機の場所」に立ちます。\n光の磁場をイメージし、あなたの真実の場所にグラウンディングすることで、\n宇宙意識とつながる準備が整います。",
+                "各システムを使う前に、まず「映写機の場所」に立ちます。\n光の磁場をイメージし、あなたの真実の場所にグラウンディングすることで、\nあなたの宇宙意識とつながる準備が整います。",
             accentColor: "#B8A9C9",
             accentBg: "linear-gradient(135deg, #F5F0FA 0%, #EDE6F5 100%)",
             href: "/preparation",
-            videoId: "", // YouTube video ID
-            audioUrl: "", // Direct audio URL
+            videoId: "",
+            audioUrl: "",
+            showVideo: true,
+            showAudio: false,
         },
         {
             id: "vision-navi",
@@ -19,12 +21,14 @@ export default function GuidePage() {
             title: "無限ビジョンナビ",
             subtitle: "Infinite Vision Navi",
             description:
-                "未来から逆算して、あなただけのビジョンを高解像度で描き出します。\nAIとの対話を通じて、体感に没入し、\n実現した自分から道を見つけていきます。",
+                "未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す対話システム。\nすでに実現した自分のエネルギーで、道が見えてきます。",
             accentColor: "#D4A574",
             accentBg: "linear-gradient(135deg, #FDF6EE 0%, #F8EDE0 100%)",
             href: "/vision-navi",
             videoId: "",
             audioUrl: "https://lpcolorful.com/product/wp-content/uploads/2026/02/line-system01.mp3",
+            showVideo: false,
+            showAudio: true,
         },
         {
             id: "limit-detector",
@@ -32,12 +36,14 @@ export default function GuidePage() {
             title: "リミットディテクター",
             subtitle: "Limit Detector",
             description:
-                "あなたが無意識に持っている「制限」を映し出し、\n分離のパターンに気づくためのAI対話システムです。\n制限に「形・材質・重さ」を与えて、はっきりと捉えます。",
+                "あなたが無意識に持っている「制限」を映し出し、\nあなたがつかっている自分への分離に気づく対話システムです。",
             accentColor: "#7B8CDE",
             accentBg: "linear-gradient(135deg, #F0F2FC 0%, #E4E8FA 100%)",
             href: "/limit-detector",
             videoId: "",
             audioUrl: "https://lpcolorful.com/product/wp-content/uploads/2026/02/line-system2.m4a",
+            showVideo: false,
+            showAudio: true,
         },
         {
             id: "letting-go",
@@ -45,17 +51,19 @@ export default function GuidePage() {
             title: "手放しワークシステム",
             subtitle: "Letting Go Work System",
             description:
-                "捉えた制限や不要なエネルギーを手放し、\n本来の光に戻すためのガイド付きワークシステムです。\n画面の指示に従って、ステップバイステップで進みます。",
+                "捉えた制限やエネルギーを、ありえないほどのシンプルさと簡単さで手放し、\n無限の可能性のじぶんに復活していくワークシステムです。",
             accentColor: "#9DB5A0",
             accentBg: "linear-gradient(135deg, #F2F7F3 0%, #E4EDE6 100%)",
             href: "/letting-go",
             videoId: "",
             audioUrl: "",
+            showVideo: true,
+            showAudio: false,
         },
     ];
 
     return (
-        <main className="guide-page" style={{ position: "relative", overflow: "hidden" }}>
+        <main className="guide-page" style={{ position: "relative" }}>
             <div className="sk-bg-glow sk-bg-glow-1" />
             <div className="sk-bg-glow sk-bg-glow-2" />
             <div className="sk-bg-glow sk-bg-glow-3" />
@@ -128,40 +136,44 @@ export default function GuidePage() {
                             <p className="guide-section-desc">{guide.description}</p>
 
                             {/* Video */}
-                            <div className="guide-media-block">
-                                <h3 className="guide-media-label">📹 ガイド動画</h3>
-                                {guide.videoId ? (
-                                    <div className="guide-video-wrapper">
-                                        <iframe
-                                            src={`https://www.youtube.com/embed/${guide.videoId}`}
-                                            title={`${guide.title} ガイド動画`}
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                            allowFullScreen
-                                        />
-                                    </div>
-                                ) : (
-                                    <div className="guide-media-placeholder">
-                                        <span className="guide-placeholder-icon">▶</span>
-                                        <span>動画を準備中です</span>
-                                    </div>
-                                )}
-                            </div>
+                            {guide.showVideo && (
+                                <div className="guide-media-block">
+                                    <h3 className="guide-media-label">📹 ガイド動画</h3>
+                                    {guide.videoId ? (
+                                        <div className="guide-video-wrapper">
+                                            <iframe
+                                                src={`https://www.youtube.com/embed/${guide.videoId}`}
+                                                title={`${guide.title} ガイド動画`}
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                            />
+                                        </div>
+                                    ) : (
+                                        <div className="guide-media-placeholder">
+                                            <span className="guide-placeholder-icon">▶</span>
+                                            <span>動画を準備中です</span>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
 
                             {/* Audio */}
-                            <div className="guide-media-block">
-                                <h3 className="guide-media-label">🔊 ガイド音声</h3>
-                                {guide.audioUrl ? (
-                                    <audio controls className="guide-audio" preload="metadata">
-                                        <source src={guide.audioUrl} />
-                                        お使いのブラウザは音声再生に対応していません。
-                                    </audio>
-                                ) : (
-                                    <div className="guide-media-placeholder guide-media-placeholder-sm">
-                                        <span className="guide-placeholder-icon">♪</span>
-                                        <span>音声を準備中です</span>
-                                    </div>
-                                )}
-                            </div>
+                            {guide.showAudio && (
+                                <div className="guide-media-block">
+                                    <h3 className="guide-media-label">🔊 ガイド音声</h3>
+                                    {guide.audioUrl ? (
+                                        <audio controls className="guide-audio" preload="metadata">
+                                            <source src={guide.audioUrl} />
+                                            お使いのブラウザは音声再生に対応していません。
+                                        </audio>
+                                    ) : (
+                                        <div className="guide-media-placeholder guide-media-placeholder-sm">
+                                            <span className="guide-placeholder-icon">♪</span>
+                                            <span>音声を準備中です</span>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
 
                             {/* CTA */}
                             <a

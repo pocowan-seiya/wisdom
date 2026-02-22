@@ -14,13 +14,21 @@ export default function StarterKitPage() {
                         <br />
                         スターターキット
                     </h1>
-                    <p className="sk-hero-description">
-                        あなたの無限の可能性を解き放つ、3つのAI対話システム。
-                        <br />
-                        ビジョンを見て、制限を見つけ、手放していく。
-                        <br />
-                        ステップ順に進むのがおすすめですが、直感で選ぶのもOKです。
-                    </p>
+                    <div className="sk-hero-subcatch">
+                        <p className="sk-hero-lead">
+                            あなたの無限の可能性を解き放つ、3つのAI対話システム。
+                        </p>
+                        <p className="sk-hero-catch">
+                            1番のワクワクのビジョンを見て動き、
+                            <br />
+                            無意識の制限をとらえて、かろやかに手放してしまう。
+                            <br />
+                            <span className="sk-hero-catch-accent">ほんとうの自分の叡智に復活して生きていく習慣のはじまりです。</span>
+                        </p>
+                        <p className="sk-hero-note">
+                            ステップ順に進むのがおすすめですが、直感で選ぶのもOKです✨
+                        </p>
+                    </div>
                 </div>
             </section>
 

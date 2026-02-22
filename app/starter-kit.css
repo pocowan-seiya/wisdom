@@ -134,12 +134,47 @@ body {
     background-clip: text;
 }
 
-.sk-hero-description {
-    font-size: 18px;
-    line-height: 2;
-    color: #475569;
+.sk-hero-subcatch {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.sk-hero-lead {
+    font-size: 16px;
     font-weight: 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
+    color: #64748B;
+    text-transform: none;
+}
+
+.sk-hero-catch {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 2.2;
+    letter-spacing: 0.06em;
+    color: #334155;
+    text-align: center;
+}
+
+.sk-hero-catch-accent {
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    background: linear-gradient(to right, #2C2C54 0%, #766589 50%, #C2A571 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sk-hero-note {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #94A3B8;
+    padding-top: 4px;
 }
 
 /* ---- Cards ---- */
@@ -1059,12 +1094,26 @@ body {
         margin-bottom: 24px;
     }
 
-    .sk-hero-description {
+    .sk-hero-subcatch {
+        gap: 16px;
+    }
+
+    .sk-hero-lead {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+    }
+
+    .sk-hero-catch {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .sk-hero-catch-accent {
         font-size: 16px;
-        line-height: 1.8;
-        color: #475569;
-        font-weight: 500;
-        letter-spacing: 0.02em;
+    }
+
+    .sk-hero-note {
+        font-size: 13px;
     }
 
     .sk-cards-section {
