@@ -23,7 +23,9 @@ export default function StarterKitPage() {
                             <br />
                             無意識の制限はとらえて、かろやかに手放してしまう。
                             <br />
-                            <span className="sk-hero-catch-accent">ほんとうの自分の叡智に復活して生きていく習慣のはじまりです。</span>
+                            <span className="sk-hero-catch-accent">ほんとうの自分の叡智に復活して生きていく</span>
+                            <br />
+                            そんな圧倒的な体験のはじまりです。
                         </p>
                         <p className="sk-hero-note">
                             ステップ順に進むのがおすすめですが、直感で選ぶのもOKです✨
@@ -93,8 +95,8 @@ export default function StarterKitPage() {
                             </svg>
                         }
                         href="/vision-navi"
-                        accentColor="#D4A574"
-                        accentColorLight="#FDF6EE"
+                        accentColor="#F59E0B" /* Amber/Orange */
+                        accentColorLight="#FEF3C7"
                     />
                     <SystemCard
                         step={2}
@@ -108,8 +110,8 @@ export default function StarterKitPage() {
                             </svg>
                         }
                         href="/limit-detector"
-                        accentColor="#7B8CDE"
-                        accentColorLight="#F0F2FC"
+                        accentColor="#6366F1" /* Indigo/Blue */
+                        accentColorLight="#E0E7FF"
                     />
                     <SystemCard
                         step={3}
@@ -124,8 +126,8 @@ export default function StarterKitPage() {
                             </svg>
                         }
                         href="/letting-go"
-                        accentColor="#9DB5A0"
-                        accentColorLight="#F2F7F3"
+                        accentColor="#10B981" /* Emerald/Green */
+                        accentColorLight="#D1FAE5"
                     />
                 </div>
             </section>

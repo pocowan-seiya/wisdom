@@ -30,7 +30,7 @@ body {
 
 .sk-landing {
     min-height: 100vh;
-    background: radial-gradient(circle at 50% 0%, #FFFFFF 0%, #F1F5F9 100%);
+    background: #FFFFFF;
     position: relative;
     z-index: 1;
 }
@@ -38,53 +38,49 @@ body {
 .sk-hero {
     position: relative;
     text-align: center;
-    padding: 60px 24px 36px;
+    padding: 80px 24px 60px;
     overflow: hidden;
     background: transparent;
     z-index: 2;
 }
 
+/* Very subtle airy glows */
 .sk-bg-glow {
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     border-radius: 50%;
     filter: blur(120px);
-    opacity: 0.25;
+    opacity: 0.4;
     pointer-events: none;
+    z-index: -1;
 }
 
 .sk-bg-glow-1 {
-    top: -150px;
-    left: -100px;
-    width: 600px;
-    height: 600px;
-    background: #00E5FF;
-    filter: blur(150px);
-    opacity: 0.25;
-    animation: sk-glow-drift 15s ease-in-out infinite alternate;
-}
-
-.sk-bg-glow-3 {
-    top: 20%;
-    left: 40%;
-    width: 500px;
-    height: 500px;
-    background: #FDE047;
-    filter: blur(140px);
-    opacity: 0.15;
+    top: -200px;
+    left: -150px;
+    background: #E0F2FE;
+    /* Light sky blue */
     animation: sk-glow-drift 20s ease-in-out infinite alternate;
 }
 
+.sk-bg-glow-3 {
+    top: 10%;
+    left: 40%;
+    width: 800px;
+    height: 800px;
+    background: #FFFAF0;
+    /* Pure warm white/gold hint */
+    filter: blur(100px);
+    opacity: 0.8;
+}
+
 .sk-bg-glow-2 {
-    bottom: -150px;
+    bottom: -200px;
     right: -100px;
-    width: 700px;
-    height: 700px;
-    background: #8B5CF6;
-    filter: blur(160px);
-    opacity: 0.20;
-    animation: sk-glow-drift 18s ease-in-out infinite alternate-reverse;
+    background: #FEF9C3;
+    /* Very faint yellow/gold */
+    animation: sk-glow-drift 25s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes sk-glow-drift {
@@ -93,42 +89,44 @@ body {
     }
 
     100% {
-        transform: translate(30px, -20px) scale(1.15);
+        transform: translate(40px, -30px) scale(1.1);
     }
 }
 
 .sk-hero-content {
     position: relative;
     z-index: 1;
-    max-width: 640px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .sk-hero-eyebrow {
     font-family: var(--font-inter), sans-serif;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #64748B;
-    margin-bottom: 20px;
+    color: #EAB308;
+    /* Bright Gold */
+    margin-bottom: 24px;
 }
 
 .sk-hero-title {
     font-family: "Shippori Mincho", "Noto Serif JP", serif;
-    font-size: 64px;
-    font-weight: 600;
-    line-height: 1.3;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 1.35;
     letter-spacing: 0.08em;
-    background: linear-gradient(to right, #2C2C54 0%, #766589 45%, #C2A571 85%, #D4B98E 100%);
+    background: linear-gradient(to right, #00C6FF 0%, #0072FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1));
 }
 
 .sk-hero-title-accent {
-    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    background: linear-gradient(135deg, #FDBB2D 0%, #F59E0B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -137,33 +135,35 @@ body {
 .sk-hero-subcatch {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
 }
 
 .sk-hero-lead {
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    color: #64748B;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #F59E0B;
+    /* Gold for lead */
     text-transform: none;
 }
 
 .sk-hero-catch {
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 500;
     line-height: 2.2;
-    letter-spacing: 0.06em;
-    color: #334155;
+    letter-spacing: 0.08em;
+    color: #1E293B;
+    /* Darker slate for readability */
     text-align: center;
 }
 
 .sk-hero-catch-accent {
     display: inline-block;
-    margin-top: 4px;
-    font-weight: 600;
-    font-size: 18px;
-    background: linear-gradient(to right, #2C2C54 0%, #766589 50%, #C2A571 100%);
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 22px;
+    background: linear-gradient(to right, #00C6FF 0%, #0072FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -171,10 +171,10 @@ body {
 
 .sk-hero-note {
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.08em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     color: #94A3B8;
-    padding-top: 4px;
+    padding-top: 12px;
 }
 
 /* ---- Cards ---- */
@@ -195,21 +195,20 @@ body {
     align-items: center;
     gap: 24px;
     padding: 28px 32px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
     border-radius: 20px;
     text-decoration: none;
     color: inherit;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.03);
+    box-shadow: 0 4px 24px rgba(2, 132, 199, 0.04);
 }
 
 .sk-prep-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(139, 92, 246, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 1);
-    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 32px rgba(2, 132, 199, 0.08);
+    border-color: #BAE6FD;
 }
 
 .sk-prep-card-icon {
@@ -219,10 +218,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+    background: linear-gradient(135deg, #FDE047 0%, #F59E0B 100%);
     color: #fff;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2);
 }
 
 .sk-prep-card-content {
@@ -260,7 +259,7 @@ body {
 .sk-prep-card-arrow {
     flex-shrink: 0;
     font-size: 20px;
-    color: #B8A9C9;
+    color: #93C5FD;
     font-weight: 300;
     transition: transform 0.3s ease;
 }
@@ -285,20 +284,14 @@ body {
 
 .sk-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.82);
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
-    border: 1.5px solid rgba(255, 255, 255, 0.95);
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
     border-radius: 24px;
     padding: 44px 32px 36px;
     text-align: center;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
-    box-shadow:
-        0 8px 32px rgba(15, 23, 42, 0.07),
-        0 2px 8px rgba(15, 23, 42, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 24px rgba(2, 132, 199, 0.04);
     overflow: hidden;
 }
 
@@ -317,13 +310,9 @@ body {
 
 .sk-card:hover {
     transform: translateY(-8px) scale(1.01);
-    box-shadow:
-        0 24px 64px rgba(15, 23, 42, 0.10),
-        0 8px 24px rgba(15, 23, 42, 0.06),
-        0 0 0 1px rgba(255, 255, 255, 1),
-        0 0 60px -10px var(--card-accent, rgba(212, 165, 116, 0.15));
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 16px 40px rgba(2, 132, 199, 0.08);
+    background: #FFFFFF;
+    border-color: #BAE6FD;
 }
 
 .sk-card:hover::before {
@@ -403,32 +392,49 @@ body {
 .sk-card-description {
     font-size: 14px;
     line-height: 1.9;
-    color: #64748B;
-    font-weight: 400;
+    color: #475569;
+    font-weight: 500;
     margin-bottom: 24px;
 }
 
 .sk-card-cta {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     color: var(--card-accent, #D4A574);
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
+    position: relative;
+}
+
+.sk-card-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--card-accent);
+    transition: width 0.3s ease;
 }
 
 .sk-card:hover .sk-card-cta {
-    letter-spacing: 1px;
-    gap: 8px;
+    letter-spacing: 0.15em;
+    gap: 10px;
+}
+
+.sk-card:hover .sk-card-cta::after {
+    width: 100%;
 }
 
 /* ---- Spaceship Class Promo ---- */
 
 .sk-promo-section {
-    padding: 64px 24px;
-    background: linear-gradient(180deg, #FAFAFA 0%, #F5F0FA 50%, #FAFAFA 100%);
+    padding: 80px 24px;
+    background: #FFFFFF;
+    border-top: 1px solid #F1F5F9;
 }
 
 .sk-promo-inner {
@@ -438,21 +444,26 @@ body {
 }
 
 .sk-promo-eyebrow {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     letter-spacing: 0.15em;
-    color: #B8A9C9;
-    margin-bottom: 16px;
+    color: #F59E0B;
+    /* Gold */
+    margin-bottom: 20px;
 }
 
 .sk-promo-title {
     font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 1.5;
-    letter-spacing: 0.06em;
-    color: #2C2C54;
+    letter-spacing: 0.08em;
+    background: linear-gradient(to right, #00C6FF 0%, #0072FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 40px;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1));
 }
 
 .sk-promo-body {
@@ -465,15 +476,16 @@ body {
 .sk-promo-body p {
     font-size: 15px;
     line-height: 2;
-    color: #475569;
-    letter-spacing: 0.04em;
+    color: #334155;
+    /* Dark gray for readability */
+    font-weight: 500;
+    letter-spacing: 0.06em;
 }
 
 .sk-promo-highlight {
-    font-weight: 600;
-    font-size: 16px !important;
-    color: #334155 !important;
-    background: linear-gradient(to right, #2C2C54 0%, #766589 50%, #C2A571 100%);
+    font-weight: 700;
+    font-size: 17px !important;
+    background: linear-gradient(to right, #D97706 0%, #F59E0B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -493,29 +505,29 @@ body {
 }
 
 .sk-promo-price span {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
-    color: #2C2C54;
+    color: #0369A1;
     font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
 }
 
 .sk-promo-btn {
     display: inline-block;
-    padding: 14px 48px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #B8A9C9 0%, #9688B0 100%);
+    padding: 16px 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #0EA5E9 0%, #3B82F6 100%);
     color: #FFF;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(150, 136, 176, 0.3);
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.25);
 }
 
 .sk-promo-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(150, 136, 176, 0.4);
+    box-shadow: 0 12px 32px rgba(14, 165, 233, 0.35);
 }
 
 /* ---- Footer ---- */
