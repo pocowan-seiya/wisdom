@@ -21,7 +21,7 @@ export default function GuidePage() {
             title: "無限ビジョンナビ",
             subtitle: "Infinite Vision Navi",
             description:
-                "未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す対話システム。\nすでに実現した自分のエネルギーで、道が見えてきます。",
+                "未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す対話システム。\nすでに実現した自分のエネルギーで、流れを起こしだします。",
             accentColor: "#D4A574",
             accentBg: "linear-gradient(135deg, #FDF6EE 0%, #F8EDE0 100%)",
             href: "/vision-navi",
@@ -36,7 +36,7 @@ export default function GuidePage() {
             title: "リミットディテクター",
             subtitle: "Limit Detector",
             description:
-                "あなたが無意識に持っている「制限」を映し出し、\nあなたがつかっている自分への分離に気づく対話システムです。",
+                "あなたが無意識に持っている「制限」、\nあなたがつかっている自分への分離に気づく対話システムです。",
             accentColor: "#7B8CDE",
             accentBg: "linear-gradient(135deg, #F0F2FC 0%, #E4E8FA 100%)",
             href: "/limit-detector",
@@ -48,10 +48,10 @@ export default function GuidePage() {
         {
             id: "letting-go",
             step: "STEP 3",
-            title: "手放しワークシステム",
+            title: "手放しシフトワーク",
             subtitle: "Letting Go Work System",
             description:
-                "捉えた制限やエネルギーを、ありえないほどのシンプルさと簡単さで手放し、\n無限の可能性のじぶんに復活していくワークシステムです。",
+                "捉えた制限やエネルギーを、ありえないほどのシンプルさと簡単さで手放し、\n無限の可能性のじぶんに復活していくワークです。",
             accentColor: "#9DB5A0",
             accentBg: "linear-gradient(135deg, #F2F7F3 0%, #E4EDE6 100%)",
             href: "/letting-go",
@@ -73,7 +73,7 @@ export default function GuidePage() {
                 <p className="guide-hero-eyebrow">How to Use</p>
                 <h1 className="guide-hero-title">はじめての方へ</h1>
                 <p className="guide-hero-description">
-                    無限の叡智スターターキットの使い方ガイドです。
+                    無限の叡智を生きるスターターキットの使い方ガイドです。
                     <br />
                     動画・音声で各ワークの流れを確認してから、
                     <br />
@@ -197,7 +197,7 @@ export default function GuidePage() {
             </section>
 
             <footer className="sk-footer">
-                <p>© 2026 無限の叡智スターターキット</p>
+                <p>© 2026 無限の叡智を生きるスターターキット</p>
             </footer>
         </main>
     );

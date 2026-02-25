@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./starter-kit.css";
 
 export const metadata: Metadata = {
-    title: "無限の叡智スターターキット",
-    description: "あなたの無限の叡智にアクセスするためのスターターキット",
+    title: "無限の叡智を生きるスターターキット",
+    description: "無限の叡智を生きるためのスターターキット",
 };
 
 export default function RootLayout({

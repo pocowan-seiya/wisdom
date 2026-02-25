@@ -6,7 +6,7 @@ const WORK_STEPS = [
     // 1. イントロ
     {
         id: "intro",
-        text: "手放しワークシステムへようこそ。\n\nこのワークでは、あなたが持っている制限（分離の周波数）を、手放していきます。\nリラックスして、タップで進めてください。",
+        text: "手放しシフトワークへようこそ。\n\nこのワークでは、あなたが持っている制限（分離の周波数）を、手放していきます。\nリラックスして、タップで進めてください。",
         inputType: "tap" as const,
     },
 
@@ -131,7 +131,7 @@ const COMPLETION_MESSAGE = "今の体感を大切にしてください✨\nあ�
 export default function LettingGoPage() {
     return (
         <GuidedChatUI
-            systemName="手放しワークシステム"
+            systemName="手放しシフトワーク"
             accentColor="#9DB5A0"
             accentColorLight="#F0F5F1"
             steps={WORK_STEPS}

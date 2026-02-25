@@ -283,7 +283,7 @@ export default function GuidedChatUI({
                 const path = part;
                 const label =
                     path === "/letting-go"
-                        ? "✨ 手放しワークシステムへ進む"
+                        ? "✨ 手放しシフトワークへ進む"
                         : path;
                 return (
                     <a key={i} href={path} className="sk-chat-link">

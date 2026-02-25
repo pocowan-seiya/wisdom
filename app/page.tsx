@@ -10,18 +10,18 @@ export default function StarterKitPage() {
                 <div className="sk-hero-content">
                     <p className="sk-hero-eyebrow">Infinite Wisdom</p>
                     <h1 className="sk-hero-title">
-                        無限の叡智
+                        無限の叡智を生きる
                         <br />
                         スターターキット
                     </h1>
                     <div className="sk-hero-subcatch">
                         <p className="sk-hero-lead">
-                            あなたの無限の可能性を解き放つ、3つのAI対話システム。
+                            無限の可能性のあなたを生きる、3つのAI対話システム。
                         </p>
                         <p className="sk-hero-catch">
-                            1番のワクワクのビジョンを見て動き、
+                            1番のワクワクのビジョンを生きて、
                             <br />
-                            無意識の制限をとらえて、かろやかに手放してしまう。
+                            無意識の制限はとらえて、かろやかに手放してしまう。
                             <br />
                             <span className="sk-hero-catch-accent">ほんとうの自分の叡智に復活して生きていく習慣のはじまりです。</span>
                         </p>
@@ -32,19 +32,20 @@ export default function StarterKitPage() {
                 </div>
             </section>
 
-            {/* Introduction Story */}
+            {/* Introduction Story - temporarily hidden
             <section className="sk-intro-banner">
                 <a href="/introduction" className="sk-intro-banner-link">
                     <span className="sk-intro-banner-icon">🌕</span>
                     <div className="sk-intro-banner-content">
                         <span className="sk-intro-banner-title">イントロダクション</span>
                         <span className="sk-intro-banner-desc">
-                            ぼくたちの意識の旅 — なぜ地球に来て、今何が始まっているのか
+                            わたしたちの意識の旅 — なぜ地球に来て、今何が始まっているのか
                         </span>
                     </div>
                     <span className="sk-intro-banner-arrow">→</span>
                 </a>
             </section>
+            */}
 
             {/* Guide Banner */}
             <section className="sk-guide-banner">
@@ -84,7 +85,7 @@ export default function StarterKitPage() {
                         step={1}
                         title="無限ビジョンナビ"
                         subtitle="Infinite Vision Navi"
-                        description="未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す対話システム。すでに実現した自分のエネルギーで、道が見えてきます。"
+                        description="未来から逆算して、あなたの1番のワクワクのビジョンを高解像度で描き出す対話システム。すでに実現した自分のエネルギーで、流れを起こしだします。"
                         icon={
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <circle cx="12" cy="12" r="3" />
@@ -99,7 +100,7 @@ export default function StarterKitPage() {
                         step={2}
                         title="リミットディテクター"
                         subtitle="Limit Detector"
-                        description="あなたが無意識に持っている「制限」を映し出し、あなたがつかっている自分への分離に気づく対話システムです。"
+                        description="あなたが無意識に持っている「制限」、あなたがつかっている自分への分離に気づく対話システムです。"
                         icon={
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
@@ -112,9 +113,9 @@ export default function StarterKitPage() {
                     />
                     <SystemCard
                         step={3}
-                        title="手放しワークシステム"
+                        title="手放しシフトワーク"
                         subtitle="Letting Go Work System"
-                        description="捉えた制限やエネルギーを、ありえないほどのシンプルさと簡単さで手放し、無限の可能性のじぶんに復活していくワークシステムです。"
+                        description="捉えた制限やエネルギーを、ありえないほどのシンプルさと簡単さで手放し、無限の可能性のじぶんに復活していくワークです。"
                         icon={
                             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -136,30 +137,30 @@ export default function StarterKitPage() {
                     <h2 className="sk-promo-title">関野あやこ<br />スペースシップクラス</h2>
                     <div className="sk-promo-body">
                         <p>
-                            自分では思ってもみなかったような、深い前世や魂レベルの、
+                            自分では思ってもみなかったような、深い前世や魂レベルの制限
                             <br />
                             使い古してなじみ深い — だからこそ自分では到底気づけないような
                             <br />
-                            「自分が自分にしている分離」
+                            「自分が自分につけた分離」
                         </p>
                         <p>
                             このクラスの揺るがない、圧倒的な磁場 —
                             <br />
                             地球の体験とは思えないほどの時空間で、
                             <br />
-                            それをいとも簡単に手放してしまう。
+                            それらをいとも簡単に手放してしまう。
                         </p>
                         <p>
-                            手放せるとも思っていないほど、じぶんが自分につけた深い重しが外れ、
+                            手放せるとも思っていなかったほどの、深い重しが外れ、
                             <br />
-                            開いていく扉、広がって上昇する自分への復活はとてつもない。
+                            扉を開き、広がって上昇する自分への復活はとてつもない。
                             <br />
                             その意識のまま、この地球で"生きる"ことができてしまう。
                         </p>
                         <p className="sk-promo-highlight">
                             文字通り、もともとの — 無限の可能性の、制限のない自分。
                             <br />
-                            やりたいことは何でもできる、そのあなたへの復活の時空間を
+                            やりたいことは何でもできる、あなたへの復活の時空間を
                             <br />
                             あなたのために使ってください。
                         </p>
@@ -180,7 +181,7 @@ export default function StarterKitPage() {
 
             {/* Footer */}
             <footer className="sk-footer">
-                <p>© 2026 無限の叡智スターターキット</p>
+                <p>© 2026 無限の叡智を生きるスターターキット</p>
             </footer>
         </main>
     );
