@@ -170,7 +170,7 @@ export default function StarterKitPage() {
                     <div className="sk-promo-cta-area">
                         <p className="sk-promo-price">Zoom体験クラス <span>5,500</span>円</p>
                         <a
-                            href="https://reservestock.jp/inquiry/MTQ0NDE5MzdiZm"
+                            href="https://www.sekinoayako.art/newclass202601"
                             target="_blank"
                             rel="noopener"
                             className="sk-promo-btn"
