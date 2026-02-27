@@ -11,6 +11,7 @@ export default function GuidePage() {
             accentBg: "linear-gradient(135deg, #F5F0FA 0%, #EDE6F5 100%)",
             href: "/preparation",
             videoId: "",
+            vimeoUrl: "https://player.vimeo.com/video/1168131500?h=ee5f57fc8e",
             audioUrl: "",
             showVideo: true,
             showAudio: false,
@@ -26,6 +27,7 @@ export default function GuidePage() {
             accentBg: "linear-gradient(135deg, #FDF6EE 0%, #F8EDE0 100%)",
             href: "/vision-navi",
             videoId: "",
+            vimeoUrl: "",
             audioUrl: "https://lpcolorful.com/product/wp-content/uploads/2026/02/line-system01.mp3",
             showVideo: false,
             showAudio: true,
@@ -41,6 +43,7 @@ export default function GuidePage() {
             accentBg: "linear-gradient(135deg, #F0F2FC 0%, #E4E8FA 100%)",
             href: "/limit-detector",
             videoId: "",
+            vimeoUrl: "",
             audioUrl: "https://lpcolorful.com/product/wp-content/uploads/2026/02/line-system2.m4a",
             showVideo: false,
             showAudio: true,
@@ -56,6 +59,7 @@ export default function GuidePage() {
             accentBg: "linear-gradient(135deg, #F2F7F3 0%, #E4EDE6 100%)",
             href: "/letting-go",
             videoId: "",
+            vimeoUrl: "https://player.vimeo.com/video/1168122474?h=e6f73a69a1",
             audioUrl: "",
             showVideo: true,
             showAudio: false,
@@ -139,7 +143,16 @@ export default function GuidePage() {
                             {guide.showVideo && (
                                 <div className="guide-media-block">
                                     <h3 className="guide-media-label">📹 ガイド動画</h3>
-                                    {guide.videoId ? (
+                                    {guide.vimeoUrl ? (
+                                        <div className="guide-video-wrapper">
+                                            <iframe
+                                                src={guide.vimeoUrl}
+                                                title={`${guide.title} ガイド動画`}
+                                                allow="autoplay; fullscreen; picture-in-picture"
+                                                allowFullScreen
+                                            />
+                                        </div>
+                                    ) : guide.videoId ? (
                                         <div className="guide-video-wrapper">
                                             <iframe
                                                 src={`https://www.youtube.com/embed/${guide.videoId}`}
