@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from '@/components/consciousness-ai-lp/HeroSection';
 import StorySection from '@/components/consciousness-ai-lp/StorySection';
+import VisionSection from '@/components/consciousness-ai-lp/VisionSection';
 import UniquenessSection from '@/components/consciousness-ai-lp/UniquenessSection';
 import TwoAxesSection from '@/components/consciousness-ai-lp/TwoAxesSection';
 import StepsSection from '@/components/consciousness-ai-lp/StepsSection';
@@ -17,6 +18,7 @@ export default function Home() {
     >
       <HeroSection />
       <StorySection />
+      <VisionSection />
       <UniquenessSection />
       <TwoAxesSection />
       <StepsSection />
