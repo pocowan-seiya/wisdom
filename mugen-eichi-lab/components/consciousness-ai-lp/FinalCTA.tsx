@@ -113,7 +113,7 @@ export default function FinalCTA() {
                             color: '#c9a84c',
                         }}
                     >
-                        🔥 イグナイトプランで始める（¥2,980/月、初月無料）
+                        🌟 マニフェストプランで始める（¥3,480/月、初月無料）
                     </a>
                     <a
                         href="#"
@@ -123,7 +123,7 @@ export default function FinalCTA() {
                             boxShadow: '0 6px 25px rgba(124,92,191,0.25)',
                         }}
                     >
-                        🌟 マニフェストプランで始める（¥6,800/月、初月無料）
+                        🚀 アクセラレートプランで始める（¥6,800/月、初月無料）
                     </a>
                     <a
                         href="#"

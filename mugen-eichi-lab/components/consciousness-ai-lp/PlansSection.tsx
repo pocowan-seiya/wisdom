@@ -33,12 +33,12 @@ interface Plan {
 
 const plans: Plan[] = [
     {
-        id: 'ignite',
-        icon: '🔥',
-        nameEn: 'Ignite',
-        nameJa: 'イグナイト',
-        price: '¥2,980',
-        tagline: 'AIを使い始める入口',
+        id: 'manifest',
+        icon: '🌟',
+        nameEn: 'Manifest',
+        nameJa: 'マニフェスト',
+        price: '¥3,480',
+        tagline: '意識×AIでビジョンを具現化する',
         featured: false,
         features: [
             {
@@ -46,55 +46,55 @@ const plans: Plan[] = [
                 detail: '最新AIツールの実演、江藤の実践デモ',
             },
             {
+                text: '意識ワーク（月1回、せいやによるバックアップ）',
+                detail: '自分の内側を整え、制限を手放す実践の時間',
+            },
+            {
                 text: 'AI実践共有動画（週1回、月4本）',
                 detail: '最新AI実践、システム開発の進捗共有',
             },
             { text: '会員専用Discord参加', detail: 'メンバー同士の交流、実践事例の共有、せいやからのリアルタイム発信' },
         ],
-        bonus: '初月無料（キャンペーンコード「MUGEN2026」）',
+        bonus: '初月無料',
         targetAudience: [
+            '意識×AIの両方を実践したい',
             '自分のビジョンを、AIで軽やかに具現化したい',
-            '無限の可能性の叡智を使って、AIを自分の叡智として活用したい',
-            '手放し・意識のシフトはあやこさんのクラスで、AI実践はこのラボで進めたい',
+            '意識のワークで自分の内側も整えたい',
             'まず気軽にコミュニティに参加してみたい',
         ],
-        ctaText: 'イグナイトプランで始める（初月無料）',
+        ctaText: 'マニフェストプランで始める（初月無料）',
         accentColor: '#c9a84c',
     },
     {
-        id: 'manifest',
-        icon: '🌟',
-        nameEn: 'Manifest',
-        nameJa: 'マニフェスト',
+        id: 'accelerate',
+        icon: '🚀',
+        nameEn: 'Accelerate',
+        nameJa: 'アクセラレート',
         price: '¥6,800',
-        tagline: '意識×AIの両輪でビジョンを具現化する',
+        tagline: 'AI自動化・自律化チームを構築し、ビジネスで実践する',
         featured: true,
-        includesFrom: 'イグナイトプラン全内容',
+        includesFrom: 'マニフェストプラン全内容',
         features: [
             {
-                text: '意識ワーク（月1回、せいやによるバックアップ）',
-                detail: '自分の内側を整え、制限を手放す実践の時間',
+                text: 'AI自動化システム構築サポート（少人数Zoom）',
+                detail: '自分専用のAIワークフロー・自律化チームを一緒に設計・構築',
             },
             {
-                text: 'AI実践セミナー月2回（質問中心のワークショップ形式）',
-                detail: '「これ、どうやるの？」をその場で解決',
+                text: 'せいやへの直接チャット質問OK（専用Discord）',
+                detail: 'テキストベースでせいやに直接質問、実践の悩みをリアルタイム解消',
             },
             {
                 text: '最新AIツールの割引提供',
                 detail: 'オリジナルツールを会員価格で（30〜50% OFF）',
             },
-            {
-                text: 'マニフェスト専用Discord（せいやへ直接質問OK）',
-                detail: 'せいやへのチャット質問、実践の悩みをリアルタイム解消',
-            },
         ],
         bonus: '初月無料',
         targetAudience: [
-            '意識×AIの両方を実践したい',
-            'AIツールを活用してビジョンを具現化したい',
-            '意識のワークで自分の内側を整えたい',
+            'AIで業務を自動化・自律化したい',
+            '自分専用のAIチームを構築したい',
+            'ビジネスでAIを実用的に使いこなしたい',
         ],
-        ctaText: 'マニフェストプランで始める（初月無料）',
+        ctaText: 'アクセラレートプランで始める（初月無料）',
         accentColor: '#7c5cbf',
     },
     {
@@ -105,7 +105,7 @@ const plans: Plan[] = [
         price: '¥19,800',
         tagline: '無限の可能性を生きる最高峰プラン',
         featured: false,
-        includesFrom: 'マニフェストプラン全内容',
+        includesFrom: 'アクセラレートプラン全内容',
         features: [
             {
                 text: '個別コンサル（月1回、60分、Zoom）',
