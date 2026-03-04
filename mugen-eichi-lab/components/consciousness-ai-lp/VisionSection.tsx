@@ -17,7 +17,6 @@ const fadeInScale = {
     transition: { duration: 0.8 },
 };
 
-/** Gradient-colored emphasis text */
 function GradientText({
     children,
     from = '#7c5cbf',
@@ -38,6 +37,23 @@ function GradientText({
         >
             {children}
         </span>
+    );
+}
+
+function Divider() {
+    return (
+        <div className="flex items-center justify-center my-10 sm:my-14">
+            <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+            <motion.div
+                initial={{ rotate: 0, scale: 0.8 }}
+                whileInView={{ rotate: 45, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="w-2.5 h-2.5 mx-4 rounded-sm"
+                style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }}
+            />
+            <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+        </div>
     );
 }
 
@@ -87,43 +103,20 @@ export default function VisionSection() {
 
                 {/* ─── Vision narrative ─── */}
 
-                {/* ① 本当の電波とは */}
+                {/* ① 意識 × AI という組み合わせの本質 */}
                 <motion.div {...fadeInUp}>
                     <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        外に向けて発信すること。
+                        意識とAIが組み合わさること——
                         <br />
-                        理解してもらうこと。
+                        それが、このコミュニティの
                         <br />
-                        説明すること。
-                    </p>
-                    <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        それが「電波」だと、
-                        <br />
-                        僕たちは思ってきました。
+                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>1番の特徴であり、ビジョンそのもの</span>です。
                     </p>
                 </motion.div>
 
-                {/* Divider */}
-                <div className="flex items-center justify-center my-10 sm:my-14">
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    <motion.div
-                        initial={{ rotate: 0, scale: 0.8 }}
-                        whileInView={{ rotate: 45, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="w-2.5 h-2.5 mx-4 rounded-sm"
-                        style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }}
-                    />
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                </div>
+                <Divider />
 
-                {/* ② 本当の電波 — 自分のビジョンへの没入 */}
-                <motion.div {...fadeInUp}>
-                    <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        でも、本当の電波は違う。
-                    </p>
-                </motion.div>
-
+                {/* ② 制限や法則を通らない創造 */}
                 <motion.div
                     {...fadeInScale}
                     className="relative rounded-3xl px-6 py-7 sm:px-8 sm:py-9 my-10"
@@ -146,68 +139,46 @@ export default function VisionSection() {
                             color: '#1a1a3e',
                         }}
                     >
-                        自分のビジョンを、
+                        制限や法則を通らない。
                         <br />
-                        もっと<GradientText>ありありと</GradientText>見ていきたい。
+                        <GradientText>平和で、パワフルで、</GradientText>
                         <br />
-                        もっと解像度高く。
-                        <br />
-                        もっとその先を。
+                        <GradientText>無限の可能性に満ちている。</GradientText>
                     </p>
                     <p className="mt-4 text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        その、自分のビジョンへの
+                        そんな僕たちの意識が反映された
                         <br />
-                        圧倒的な没入——
+                        サービス、システム、仕組み、形——
                         <br />
                         <span style={{ fontWeight: 600, color: '#1a1a3e' }}>
-                            それこそが、本当の電波なんです。
+                            AIというバックアップを使って、
                         </span>
+                        <br />
+                        穏やかに、具現化していく。
                     </p>
                 </motion.div>
 
-                {/* Divider */}
-                <div className="flex items-center justify-center my-10 sm:my-14">
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    <motion.div
-                        initial={{ rotate: 0, scale: 0.8 }}
-                        whileInView={{ rotate: 45, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="w-2.5 h-2.5 mx-4 rounded-sm"
-                        style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }}
-                    />
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                </div>
+                <Divider />
 
-                {/* ③ ビジョンが振動を起こす */}
+                {/* ③ 創ったものから放たれる電波 */}
                 <motion.div {...fadeInUp}>
                     <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        自分のビジョンに向かっていく。
+                        そうやって創ったものから
                         <br />
-                        自分の意識が、ビジョンに<GradientText from="#c9a84c" to="#7c5cbf">振動</GradientText>していく。
+                        放たれる電波もまた、
+                        <br />
+                        <GradientText from="#c9a84c" to="#7c5cbf">その意識の電波</GradientText>になっていく。
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        その波が、自然と広がっていく。
+                        無限の可能性の中で、
                         <br />
-                        それが、僕たちの本来の力です。
+                        穏やかに創り、穏やかに広がっていく。
                     </p>
                 </motion.div>
 
-                {/* Divider */}
-                <div className="flex items-center justify-center my-10 sm:my-14">
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    <motion.div
-                        initial={{ rotate: 0, scale: 0.8 }}
-                        whileInView={{ rotate: 45, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="w-2.5 h-2.5 mx-4 rounded-sm"
-                        style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }}
-                    />
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                </div>
+                <Divider />
 
-                {/* ④ VoiSlide Movie — 意識の反映の実例 */}
+                {/* ④ VoiSlide Movie — 実例として */}
                 <motion.div
                     {...fadeInScale}
                     className="relative rounded-3xl px-6 py-8 sm:px-8 sm:py-10 my-6"
@@ -220,80 +191,38 @@ export default function VisionSection() {
                         className="text-xs tracking-[0.15em] mb-4"
                         style={{ color: '#c9a84c', fontWeight: 500 }}
                     >
-                        ✦ STORY — VoiSlide Movie
+                        ✦ 実例 — VoiSlide Movie
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        僕自身、自分の意識の中から見えてきたビジョン——
+                        実際に、僕自身がこのビジョンを大事にしながら
                         <br />
-                        「自分の声とビジョンを、
-                        <br />
-                        もっとありありと形にしたい」
+                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>VoiSlide Movie</span> というサービスを創りました。
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        そのビジョンが、
-                        <br />
-                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>VoiSlide Movie</span>
-                        というサービスのコンセプトになりました。
-                    </p>
-                    <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
                         スキルや技術からではなく、
                         <br />
-                        <GradientText from="#c9a84c" to="#7c5cbf">意識の反映</GradientText>として、
-                        AIのバックアップで創れた。
+                        自分の意識の中から見えてきたビジョン——
                         <br />
-                        これが、意識 × AI の力です。
-                    </p>
-                </motion.div>
-
-                {/* Divider */}
-                <div className="flex items-center justify-center my-10 sm:my-14">
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    <motion.div
-                        initial={{ rotate: 0, scale: 0.8 }}
-                        whileInView={{ rotate: 45, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="w-2.5 h-2.5 mx-4 rounded-sm"
-                        style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }}
-                    />
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                </div>
-
-                {/* ⑤ 意識がシフトすると、すべてが変わる */}
-                <motion.div {...fadeInUp}>
-                    <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        意識がシフトすると、
+                        その<GradientText from="#c9a84c" to="#7c5cbf">意識の反映</GradientText>として、
                         <br />
-                        自分から来るひらめきが変わる。
-                        <br />
-                        ひらめきが変われば、
-                        <br />
-                        創るものが変わる。
+                        AIのバックアップで創ることができた。
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        サービスも、システムも、
+                        意識がシフトすると、ひらめきが変わる。
                         <br />
-                        仕組みも、発信も——
+                        ひらめきが変われば、創るものが変わる。
                         <br />
-                        すべてが<span style={{ fontWeight: 600, color: '#1a1a3e' }}>意識の反映</span>になっていく。
+                        <span style={{ fontWeight: 500, color: '#1a1a3e' }}>
+                            それが当たり前に起きていく——
+                        </span>
+                        <br />
+                        これが、僕たちの意識の持つ本来の力です。
                     </p>
                 </motion.div>
 
-                {/* Divider */}
-                <div className="flex items-center justify-center my-10 sm:my-14">
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    <motion.div
-                        initial={{ rotate: 0, scale: 0.8 }}
-                        whileInView={{ rotate: 45, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="w-2.5 h-2.5 mx-4 rounded-sm"
-                        style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }}
-                    />
-                    <div className="w-12 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                </div>
+                <Divider />
 
-                {/* ⑥ コミュニティのビジョン — クロージング */}
+                {/* ⑤ コミュニティのビジョン — クロージング */}
                 <motion.div
                     {...fadeInScale}
                     className="text-center rounded-3xl py-10 px-6 sm:py-12"
@@ -303,13 +232,13 @@ export default function VisionSection() {
                     }}
                 >
                     <p className="text-base leading-[2.2] tracking-wide mb-4" style={{ color: '#3a3a5a' }}>
-                        穏やかに、でもパワフルに。
+                        自分の意識が反映されたものを、
                         <br />
-                        無限の可能性の中から、
+                        AIと一緒に創っていく。
                         <br />
-                        自分の意識が反映された
+                        そこから放たれる電波で、
                         <br />
-                        ものを創っていく。
+                        世界が自然と広がっていく。
                     </p>
                     <p
                         className="text-xl sm:text-2xl leading-[1.8]"
@@ -321,17 +250,9 @@ export default function VisionSection() {
                             WebkitTextFillColor: 'transparent',
                         }}
                     >
-                        平和で、パワフルで、
+                        こういうビジョンで動いている
                         <br />
-                        無限の可能性に満ちた
-                        <br />
-                        創造を、一緒に。
-                    </p>
-                    <p
-                        className="mt-4 text-sm"
-                        style={{ fontStyle: 'italic', color: '#7c5cbf' }}
-                    >
-                        それが、このコミュニティのビジョンです。
+                        コミュニティです。
                     </p>
                 </motion.div>
             </div>
