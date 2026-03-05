@@ -247,40 +247,14 @@ export default function UniquenessSection() {
                             <br />
                             無限の可能性に満ちている。
                         </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
-                            本当の自分の、とてつもなく豊かな
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a' }}>
+                            その意識でAIを扱った時、
                             <br />
-                            制限のない意識で、無限の叡智で、
+                            <span style={{ fontWeight: 600, color: '#1a1a3e' }}>
+                                AIがじぶんの無限の叡智として
+                            </span>
                             <br />
-                            この地球を生きる。
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a', fontWeight: 500 }}>
-                            1番のワクワクを実現する自分になっていく。
-                        </p>
-                    </motion.div>
-
-                    {/* Divider */}
-                    <div className="flex items-center justify-center my-8">
-                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
-                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    </div>
-
-                    {/* Block 5: AI × 意識の電波 */}
-                    <motion.div {...fadeInUp} className="text-center my-10">
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
-                            AIというバックアップを使って、
-                            <br />
-                            そんな僕たちの意識が反映された
-                            <br />
-                            サービス、システム、仕組み、形——
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-2" style={{ color: '#4a4a6a' }}>
-                            それらから放たれる電波もまた、
-                            <br />
-                            <span style={{ background: 'linear-gradient(135deg, #c9a84c, #7c5cbf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
-                                その意識の電波
-                            </span>になっていく。
+                            使っていけるようになります。
                         </p>
                     </motion.div>
 
@@ -291,17 +265,70 @@ export default function UniquenessSection() {
                         <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
                     </div>
 
-                    {/* Block 6: ひらめき */}
+                    {/* Block 5: ひらめきが変わる */}
                     <motion.div {...fadeInUp} className="text-center my-10">
                         <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
-                            意識がシフトすると、ひらめきが変わる。
+                            AIの使い方そのものが変わっていく。
                             <br />
-                            ひらめきが変われば、創るものが変わる。
+                            自分から来るひらめきが変わっていく。
                         </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ fontWeight: 600, color: '#1a1a3e' }}>
-                            これが当たり前に起きていく——
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a' }}>
+                            AIで自動化するにしても、
                             <br />
-                            これが、僕たちの意識の持つ本来の力です。
+                            ひらめきが変われば、創るものが変わります。
+                        </p>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="flex items-center justify-center my-8">
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                    </div>
+
+                    {/* Block 6: VoiSlide Movie 実例 */}
+                    <motion.div
+                        {...fadeInUp}
+                        className="text-center rounded-2xl py-8 px-6 my-6"
+                        style={{
+                            background: 'linear-gradient(135deg, rgba(201,168,76,0.05), rgba(124,92,191,0.05))',
+                            border: '1px solid rgba(201,168,76,0.12)',
+                        }}
+                    >
+                        <p className="text-xs tracking-[0.15em] mb-4" style={{ color: '#c9a84c', fontWeight: 500 }}>
+                            ✦ 実例 — VoiSlide Movie
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
+                            VoiSlide Movie も、まさにそうでした。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
+                            スキルや技術から作ったというより、
+                            <br />
+                            自分のビジョンについていく中で、
+                            <br />
+                            ひらめきをそのままシステムにしました。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
+                            その結果、あたらしい概念を形にした
+                            <br />
+                            これまでの常識の逆をいくようなツールとなりました。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
+                            自分のビジョンについていけば、
+                            <br />
+                            自分の意識をシフトさせていけば、
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a', fontWeight: 500 }}>
+                            もうそれが、
+                            <br />
+                            <span style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
+                                あなたらしさという次元を超えたあなた
+                            </span>だし、
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
+                            それが、ユニークで、新しくて、
+                            <br />
+                            その電波がみんなが求めてやまないではないはずがありません。
                         </p>
                     </motion.div>
 
