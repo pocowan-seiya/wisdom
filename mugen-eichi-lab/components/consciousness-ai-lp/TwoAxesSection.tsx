@@ -159,13 +159,6 @@ export default function TwoAxesSection() {
                         <br />
                         あなたのビジョンが現実になります。
                     </p>
-                    <p className="text-sm leading-relaxed" style={{ color: '#7c5cbf', fontStyle: 'italic' }}>
-                        💫 さらに深い意識のシフトを求める方へ
-                        <br />
-                        関野あやこさんの「手放しのクラス」を併用することで、
-                        <br />
-                        自分でも気づかなかった分離を終わらせ、より深い変容が加速します。
-                    </p>
                 </motion.div>
             </div>
         </section>
