@@ -95,10 +95,27 @@ export default function VideoSection() {
 
                 {/* Caption */}
                 <motion.div {...fadeInUp} className="text-center mt-6">
-                    <p className="text-sm leading-relaxed" style={{ color: '#4a4a6a' }}>
+                    <p className="text-sm leading-relaxed mb-8" style={{ color: '#4a4a6a' }}>
                         このコミュニティで何が起きていくのか——
                         <br />
                         その全体像を、動画でお伝えします。
+                    </p>
+                    <a
+                        href="#plans"
+                        className="inline-block rounded-full px-10 py-4 text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                        style={{
+                            fontFamily: '"Noto Serif JP", serif',
+                            fontWeight: 600,
+                            color: '#fff',
+                            background: 'linear-gradient(135deg, #7c5cbf, #5a3d9e)',
+                            boxShadow: '0 4px 20px rgba(124,92,191,0.3)',
+                            letterSpacing: '0.06em',
+                        }}
+                    >
+                        無限叡智ラボに申し込む
+                    </a>
+                    <p className="text-xs mt-3" style={{ color: '#7c5cbf', fontStyle: 'italic' }}>
+                        ✦ 初月無料・すべてのプランで体験できます
                     </p>
                 </motion.div>
             </div>
