@@ -134,20 +134,29 @@ export default function UniquenessSection() {
                     >
                         コミュニティの独自性
                     </h2>
-                    <p
-                        className="text-base sm:text-lg leading-relaxed"
+                    <div
+                        className="inline-block rounded-2xl px-8 py-5 mt-2"
                         style={{
-                            fontFamily: '"Noto Serif JP", serif',
-                            fontWeight: 500,
-                            background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
+                            background: 'linear-gradient(135deg, rgba(124,92,191,0.08), rgba(201,168,76,0.06))',
+                            border: '1px solid rgba(124,92,191,0.15)',
+                            boxShadow: '0 4px 20px rgba(124,92,191,0.08)',
                         }}
                     >
-                        精神次元 × 物理次元を統合する
-                        <br />
-                        唯一無二のコミュニティ
-                    </p>
+                        <p
+                            className="text-xl sm:text-2xl md:text-3xl leading-[1.6] tracking-wide"
+                            style={{
+                                fontFamily: '"Noto Serif JP", serif',
+                                fontWeight: 700,
+                                background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                            }}
+                        >
+                            精神次元 × 物理次元を統合する
+                            <br />
+                            唯一無二のコミュニティ
+                        </p>
+                    </div>
                     <div className="section-divider mt-8" />
                 </motion.div>
 
