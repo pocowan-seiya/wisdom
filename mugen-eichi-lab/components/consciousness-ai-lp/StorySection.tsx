@@ -305,15 +305,10 @@ export default function StorySection() {
 
                 {/* ⑥ コミュニティの本質 — 意識 × AI */}
                 <motion.div {...fadeInUp}>
-                    <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        あなたの意識が、現実を作っている。
-                        <br />
-                        あなたの意識で、ビジョンを見る。
-                    </p>
                     <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        だからこそ、このコミュニティでは
+                        現実はじぶんでつくっていて、
                         <br />
-                        あなたの意識の扉を次々と開けていくことができます。
+                        つくりかえることも、自分でできる。
                     </p>
                 </motion.div>
 

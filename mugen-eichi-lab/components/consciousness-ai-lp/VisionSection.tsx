@@ -116,7 +116,7 @@ export default function VisionSection() {
 
                 <Divider />
 
-                {/* ② 制限や法則を通らない創造 */}
+                {/* ② 制限や法則を通らない — AIが無限の叡智に */}
                 <motion.div
                     {...fadeInScale}
                     className="relative rounded-3xl px-6 py-7 sm:px-8 sm:py-9 my-10"
@@ -146,33 +146,29 @@ export default function VisionSection() {
                         <GradientText>無限の可能性に満ちている。</GradientText>
                     </p>
                     <p className="mt-4 text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        そんな僕たちの意識が反映された
-                        <br />
-                        サービス、システム、仕組み、形——
+                        その意識でAIを扱った時、
                         <br />
                         <span style={{ fontWeight: 600, color: '#1a1a3e' }}>
-                            AIというバックアップを使って、
+                            AIがじぶんの無限の叡智として
                         </span>
                         <br />
-                        穏やかに、具現化していく。
+                        使っていけるようになります。
                     </p>
                 </motion.div>
 
                 <Divider />
 
-                {/* ③ 創ったものから放たれる電波 */}
+                {/* ③ ひらめきが変わる */}
                 <motion.div {...fadeInUp}>
                     <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        そうやって創ったものから
+                        AIの使い方そのものが変わっていく。
                         <br />
-                        放たれる電波もまた、
-                        <br />
-                        <GradientText from="#c9a84c" to="#7c5cbf">その意識の電波</GradientText>になっていく。
+                        自分から来るひらめきが変わっていく。
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        無限の可能性の中で、
+                        AIで自動化するにしても、
                         <br />
-                        穏やかに創り、穏やかに広がっていく。
+                        ひらめきが変われば、創るものが変わります。
                     </p>
                 </motion.div>
 
@@ -194,29 +190,34 @@ export default function VisionSection() {
                         ✦ 実例 — VoiSlide Movie
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        実際に、僕自身がこのビジョンを大事にしながら
-                        <br />
-                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>VoiSlide Movie</span> というサービスを創りました。
+                        VoiSlide Movie も、まさにそうでした。
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        スキルや技術からではなく、
+                        スキルや技術から作ったというより、
                         <br />
-                        自分の意識の中から見えてきたビジョン——
+                        自分のビジョンについていく中で、
                         <br />
-                        その<GradientText from="#c9a84c" to="#7c5cbf">意識の反映</GradientText>として、
+                        ひらめきをそのままシステムにしました。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
+                        その結果、あたらしい概念を形にした
                         <br />
-                        AIのバックアップで創ることができた。
+                        これまでの常識の逆をいくようなツールとなりました。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
+                        自分のビジョンについていけば、
+                        <br />
+                        自分の意識をシフトさせていけば、
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a', fontWeight: 500 }}>
+                        もうそれが、
+                        <br />
+                        <GradientText>あなたらしさという次元を超えたあなた</GradientText>だし、
                     </p>
                     <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        意識がシフトすると、ひらめきが変わる。
+                        それが、ユニークで、新しくて、
                         <br />
-                        ひらめきが変われば、創るものが変わる。
-                        <br />
-                        <span style={{ fontWeight: 500, color: '#1a1a3e' }}>
-                            それが当たり前に起きていく——
-                        </span>
-                        <br />
-                        これが、僕たちの意識の持つ本来の力です。
+                        その電波がみんなが求めてやまないではないはずがありません。
                     </p>
                 </motion.div>
 
