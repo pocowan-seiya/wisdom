@@ -22,20 +22,6 @@ interface Category {
     items: ExampleItem[];
 }
 
-const descriptionLines = [
-    '僕たちはこれまで、精神次元と物理次元を分けてきました。',
-    'でも、もうそんな時代は終わります。なぜなら、もともと1つだからです。',
-    'それが、本当の自分の無限の可能性の意識で、物理次元の地球を生きるということです。',
-    '精神次元の最先端 = 意識のシフト。物理次元の最先端 = AI。',
-    '意識とAIが組み合わさること——それが、このコミュニティの1番の特徴であり、ビジョンそのものです。',
-    '制限や法則を通らない。平和で、パワフルで、無限の可能性に満ちている。',
-    '本当の自分の、とてつもなく豊かな制限のない意識で、無限の叡智で、この地球を生きる。',
-    '1番のワクワクを実現する自分になっていく。',
-    'AIというバックアップを使って、そんな僕たちの意識が反映されたサービス、システム、仕組み、形——それらから放たれる電波もまた、その意識の電波になっていく。',
-    '意識がシフトすると、ひらめきが変わる。ひらめきが変われば、創るものが変わる。',
-    'これが当たり前に起きていく——これが、僕たちの意識の持つ本来の力です。',
-    'それが、理想論ではなくリアリティを持って、起きていくコミュニティです。',
-];
 
 const categories: Category[] = [
     {
@@ -130,7 +116,7 @@ export default function UniquenessSection() {
 
             <div className="relative z-10 max-w-3xl mx-auto px-6">
                 {/* Section heading */}
-                <motion.div {...fadeInUp} className="text-center mb-12">
+                <motion.div {...fadeInUp} className="text-center mb-14">
                     <p
                         className="text-xs tracking-[0.2em] mb-4"
                         style={{ color: '#c9a84c', fontWeight: 500 }}
@@ -138,7 +124,7 @@ export default function UniquenessSection() {
                         UNIQUENESS
                     </p>
                     <h2
-                        className="text-xl sm:text-2xl leading-relaxed mb-6"
+                        className="text-2xl sm:text-3xl leading-relaxed mb-4"
                         style={{
                             fontFamily: '"Noto Serif JP", serif',
                             fontWeight: 600,
@@ -146,27 +132,197 @@ export default function UniquenessSection() {
                             letterSpacing: '0.04em',
                         }}
                     >
+                        コミュニティの独自性
+                    </h2>
+                    <p
+                        className="text-base sm:text-lg leading-relaxed"
+                        style={{
+                            fontFamily: '"Noto Serif JP", serif',
+                            fontWeight: 500,
+                            background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                        }}
+                    >
                         精神次元 × 物理次元を統合する
                         <br />
                         唯一無二のコミュニティ
-                    </h2>
+                    </p>
                     <div className="section-divider mt-8" />
                 </motion.div>
 
-                {/* Description */}
-                <motion.div {...fadeInUp} className="mb-16">
-                    <div className="space-y-3">
-                        {descriptionLines.map((line, i) => (
-                            <p
-                                key={i}
-                                className="text-sm sm:text-base leading-[2] tracking-wide"
-                                style={{ color: '#4a4a6a' }}
-                            >
-                                {line}
-                            </p>
-                        ))}
+                {/* Description — designed blocks */}
+                <div className="mb-16 max-w-2xl mx-auto space-y-0">
+                    {/* Block 1: 導入 */}
+                    <motion.div {...fadeInUp} className="text-center mb-10">
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
+                            僕たちはこれまで、精神次元と物理次元を分けてきました。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-2" style={{ color: '#4a4a6a' }}>
+                            でも、もうそんな時代は終わります。
+                            <br />
+                            なぜなら、<span style={{ fontWeight: 600, color: '#1a1a3e' }}>もともと1つ</span>だからです。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a' }}>
+                            それが、本当の自分の無限の可能性の意識で、
+                            <br />
+                            物理次元の地球を生きるということです。
+                        </p>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="flex items-center justify-center my-8">
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
                     </div>
-                </motion.div>
+
+                    {/* Block 2: 最先端の定義 — accent card */}
+                    <motion.div
+                        {...fadeInUp}
+                        className="rounded-2xl px-6 py-6 sm:px-8 sm:py-7 my-8"
+                        style={{
+                            background: 'linear-gradient(135deg, rgba(124,92,191,0.06) 0%, rgba(201,168,76,0.04) 100%)',
+                            borderLeft: '3px solid rgba(124,92,191,0.3)',
+                        }}
+                    >
+                        <p
+                            className="text-base sm:text-lg leading-[2] tracking-wide text-center"
+                            style={{
+                                fontFamily: '"Noto Serif JP", serif',
+                                fontWeight: 600,
+                                color: '#1a1a3e',
+                            }}
+                        >
+                            精神次元の最先端 =
+                            <span style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> 意識のシフト</span>
+                            <br />
+                            物理次元の最先端 =
+                            <span style={{ background: 'linear-gradient(135deg, #c9a84c, #7c5cbf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> AI</span>
+                        </p>
+                    </motion.div>
+
+                    {/* Block 3: ビジョン */}
+                    <motion.div {...fadeInUp} className="text-center my-10">
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
+                            意識とAIが組み合わさること——
+                            <br />
+                            それが、このコミュニティの
+                            <br />
+                            <span style={{ fontWeight: 600, color: '#1a1a3e' }}>1番の特徴であり、ビジョンそのもの</span>です。
+                        </p>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="flex items-center justify-center my-8">
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                    </div>
+
+                    {/* Block 4: 平和でパワフル */}
+                    <motion.div {...fadeInUp} className="text-center my-10">
+                        <p
+                            className="text-lg sm:text-xl leading-[1.8] mb-4"
+                            style={{
+                                fontFamily: '"Noto Serif JP", serif',
+                                fontWeight: 600,
+                                background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                            }}
+                        >
+                            制限や法則を通らない。
+                            <br />
+                            平和で、パワフルで、
+                            <br />
+                            無限の可能性に満ちている。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
+                            本当の自分の、とてつもなく豊かな
+                            <br />
+                            制限のない意識で、無限の叡智で、
+                            <br />
+                            この地球を生きる。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a', fontWeight: 500 }}>
+                            1番のワクワクを実現する自分になっていく。
+                        </p>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="flex items-center justify-center my-8">
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                    </div>
+
+                    {/* Block 5: AI × 意識の電波 */}
+                    <motion.div {...fadeInUp} className="text-center my-10">
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
+                            AIというバックアップを使って、
+                            <br />
+                            そんな僕たちの意識が反映された
+                            <br />
+                            サービス、システム、仕組み、形——
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-2" style={{ color: '#4a4a6a' }}>
+                            それらから放たれる電波もまた、
+                            <br />
+                            <span style={{ background: 'linear-gradient(135deg, #c9a84c, #7c5cbf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
+                                その意識の電波
+                            </span>になっていく。
+                        </p>
+                    </motion.div>
+
+                    {/* Divider */}
+                    <div className="flex items-center justify-center my-8">
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
+                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
+                    </div>
+
+                    {/* Block 6: ひらめき */}
+                    <motion.div {...fadeInUp} className="text-center my-10">
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
+                            意識がシフトすると、ひらめきが変わる。
+                            <br />
+                            ひらめきが変われば、創るものが変わる。
+                        </p>
+                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ fontWeight: 600, color: '#1a1a3e' }}>
+                            これが当たり前に起きていく——
+                            <br />
+                            これが、僕たちの意識の持つ本来の力です。
+                        </p>
+                    </motion.div>
+
+                    {/* Block 7: クロージング — accent card */}
+                    <motion.div
+                        {...fadeInUp}
+                        className="text-center rounded-2xl py-8 px-6 mt-8"
+                        style={{
+                            background: 'linear-gradient(135deg, rgba(26,26,62,0.03), rgba(124,92,191,0.06), rgba(201,168,76,0.04))',
+                            border: '1px solid rgba(124,92,191,0.08)',
+                        }}
+                    >
+                        <p
+                            className="text-base sm:text-lg leading-[1.8]"
+                            style={{
+                                fontFamily: '"Noto Serif JP", serif',
+                                fontWeight: 600,
+                                color: '#1a1a3e',
+                            }}
+                        >
+                            それが、理想論ではなく
+                            <br />
+                            <span style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                                リアリティを持って、起きていく
+                            </span>
+                            <br />
+                            コミュニティです。
+                        </p>
+                    </motion.div>
+                </div>
 
                 {/* Category lists */}
                 <div className="space-y-12">
