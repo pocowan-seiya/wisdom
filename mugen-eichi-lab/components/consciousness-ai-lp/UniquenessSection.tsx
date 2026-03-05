@@ -313,6 +313,10 @@ export default function UniquenessSection() {
                             <br />
                             これまでの常識の逆をいくようなツールとなりました。
                         </p>
+                    </motion.div>
+
+                    {/* ビジョンの本質 — 枠外テキスト */}
+                    <motion.div {...fadeInUp} className="text-center my-10">
                         <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
                             自分のビジョンについていけば、
                             <br />

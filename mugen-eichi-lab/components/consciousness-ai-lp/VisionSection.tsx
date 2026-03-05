@@ -204,6 +204,10 @@ export default function VisionSection() {
                         <br />
                         これまでの常識の逆をいくようなツールとなりました。
                     </p>
+                </motion.div>
+
+                {/* ビジョンの本質 — 枠外テキスト */}
+                <motion.div {...fadeInUp} className="my-8">
                     <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
                         自分のビジョンについていけば、
                         <br />
