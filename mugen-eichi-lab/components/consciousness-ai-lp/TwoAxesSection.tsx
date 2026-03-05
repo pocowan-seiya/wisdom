@@ -38,14 +38,14 @@ export default function TwoAxesSection() {
                         無限叡智ラボの2つの軸
                     </h2>
                     <p className="text-base sm:text-lg" style={{ color: '#4a4a6a' }}>
-                        意識の統合 × AIでの具現化　——　この両輪で、ビジョンが現実になる
+                        意識のシフト × AIでの具現化　——　この両輪で、ビジョンが現実になる
                     </p>
                     <div className="section-divider mt-8" />
                 </motion.div>
 
                 {/* Two axes cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
-                    {/* Axis 1: 意識の統合 */}
+                    {/* Axis 1: 意識のシフト */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function TwoAxesSection() {
                                     color: '#1a1a3e',
                                 }}
                             >
-                                軸1：意識の統合
+                                軸1：意識のシフト
                             </h3>
                             <div
                                 className="w-12 h-0.5 mx-auto rounded-full"
@@ -160,7 +160,7 @@ export default function TwoAxesSection() {
                         あなたのビジョンが現実になります。
                     </p>
                     <p className="text-sm leading-relaxed" style={{ color: '#7c5cbf', fontStyle: 'italic' }}>
-                        💫 さらに深い意識の統合を求める方へ
+                        💫 さらに深い意識のシフトを求める方へ
                         <br />
                         関野あやこさんの「手放しのクラス」を併用することで、
                         <br />
