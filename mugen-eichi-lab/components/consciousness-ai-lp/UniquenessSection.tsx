@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -10,35 +10,42 @@ const fadeInUp = {
     transition: { duration: 0.8 },
 };
 
-interface UniquenessItem {
-    id: number;
-    icon: string;
-    label: string;
+interface ExampleItem {
     title: string;
-    description: string[];
-    examples: { title: string; detail: string }[];
-    sessionInfo: string;
+    detail: string;
 }
 
-const uniquenessData: UniquenessItem[] = [
+interface Category {
+    label: string;
+    icon: string;
+    accentColor: string;
+    items: ExampleItem[];
+}
+
+const descriptionLines = [
+    '僕たちはこれまで、精神次元と物理次元を分けてきました。',
+    'でも、もうそんな時代は終わります。なぜなら、もともと1つだからです。',
+    'それが、本当の自分の無限の可能性の意識で、物理次元の地球を生きるということです。',
+    '精神次元の最先端 = 意識のシフト。物理次元の最先端 = AI。',
+    '意識とAIが組み合わさること——それが、このコミュニティの1番の特徴であり、ビジョンそのものです。',
+    '制限や法則を通らない。平和で、パワフルで、無限の可能性に満ちている。',
+    '本当の自分の、とてつもなく豊かな制限のない意識で、無限の叡智で、この地球を生きる。',
+    '1番のワクワクを実現する自分になっていく。',
+    'AIというバックアップを使って、そんな僕たちの意識が反映されたサービス、システム、仕組み、形——それらから放たれる電波もまた、その意識の電波になっていく。',
+    '意識がシフトすると、ひらめきが変わる。ひらめきが変われば、創るものが変わる。',
+    'これが当たり前に起きていく——これが、僕たちの意識の持つ本来の力です。',
+    'それが、理想論ではなくリアリティを持って、起きていくコミュニティです。',
+];
+
+const categories: Category[] = [
     {
-        id: 1,
+        label: 'AI',
         icon: '⚡',
-        label: '独自性 01',
-        title: 'AIを自分の叡智として使い、ビジョンを軽やかに具現化する',
-        description: [
-            '意識をシフトし、新しい意識領域で見える1番のビジョンに生きていく。',
-            'そこで見えてきたひらめき、サイン、アイデア。それを自分を生きるために使っていく。',
-            'そのバックアップに、AIを思う存分使うことを許可していく。',
-            '江藤が実践するAI情報やAIツールを使い、無限の可能性を、形にしていきます。',
-            'AIが自律性を持つ中、時間という概念を超えていく。AIが勝手に動いてくれるような時代になっています。',
-            '軽やかに、これまでの常識や概念を超えてビジョンを起こしていってしまう。',
-            'それが、AI実践です。',
-        ],
-        examples: [
+        accentColor: '#c9a84c',
+        items: [
             {
                 title: '最新AIツールを使った実用的なAI活用',
-                detail: 'Claude、ChatGPT、Gemini、動画生成AI、自律型AIエージェント → 江藤が実際に使っているツールの実演・解説',
+                detail: 'Claude、ChatGPT、Gemini、生成AI、自動ワークフローツール、自律型AIエージェント → 江藤が実際に使っているツールの実演・解説',
             },
             {
                 title: 'ビジョンを具体的な形にしていく実践',
@@ -54,27 +61,15 @@ const uniquenessData: UniquenessItem[] = [
             },
             {
                 title: '最新AIトレンドのキャッチアップ',
-                detail: '「これは使える！」をリアルタイムで共有',
+                detail: '「これは使える！」をリアルタイムで共有・実践',
             },
         ],
-        sessionInfo: '月1〜2回のAI実践セミナー（各90分、録画あり）で実践。質問中心のワークショップ形式。',
     },
     {
-        id: 2,
+        label: '意識のシフト',
         icon: '🌿',
-        label: '独自性 02',
-        title: '手放しのワークで、見えない制限の先にいく',
-        description: [
-            '自分が全て映し出している。',
-            'その本来の場所に立ち、自分の意識を変容させていく。',
-            '自分が捉えきれない、じぶんがじぶんにかけている制限をいとも簡単に手放していく。',
-            'じぶんの分離の線を消していき、本当の自分の意識に復活していく。',
-            '関野あやこさんが第一人者としてダイレクトに復活するツールとして生み出した驚くほどの簡単さとシンプルさをベースに、コミュニティ内で実践していきます。',
-            '制限を手放したその先にある、あなたの無限の叡智を使って、ビジョンを生きていく。',
-            'それが、手放しのワークです。',
-            '💫 さらに深い統合を求める方は、あやこさんの「手放しのクラス」を併用することで、自分でも気づかなかった分離を終わらせ、より深い変容が加速します。',
-        ],
-        examples: [
+        accentColor: '#7c5cbf',
+        items: [
             {
                 title: '現実に揺れるあり方',
                 detail: '現実が良いと優越感・特別感を感じ、良くないとがっかり → この振り幅を手放し、現実に揺れない自分軸を取り戻す',
@@ -85,7 +80,7 @@ const uniquenessData: UniquenessItem[] = [
             },
             {
                 title: 'ビジョンを見ることを無意識に止めている制限',
-                detail: '「こんなこと、自分には無理」→ ビジョンを見ることを許可していく',
+                detail: '「こんなこと、自分には無理」「自分はこんなもの」→ 無制限のビジョンを見ることを許可していく',
             },
             {
                 title: 'ビジョンに動こうとしたときに出てくる重さ',
@@ -93,31 +88,15 @@ const uniquenessData: UniquenessItem[] = [
             },
             {
                 title: '「自分はこんな人間だ」という信念',
-                detail: '「自分はこれだけはできない」→ 自分に貼り付けたレッテルを手放す',
+                detail: '「自分はこれだけはできない」「自分はこういう性格だ」→ 自分に貼り付けたラベルを手放す',
             },
         ],
-        sessionInfo: '月2回の手放しのワークセッション（各90分、録画あり）で実践。',
     },
     {
-        id: 3,
+        label: '物理次元 × 精神次元',
         icon: '♾️',
-        label: '独自性 03',
-        title: '精神次元 × 物理次元を統合する唯一無二のコミュニティ',
-        description: [
-            '僕たちはこれまで、精神次元と物理次元を分けてきました。',
-            'でも、もうそんな時代は終わります。なぜなら、もともと1つだからです。',
-            'それが、本当の自分の無限の可能性の意識で、物理次元の地球を生きるということです。',
-            '精神次元の最先端 = 意識のシフト。物理次元の最先端 = AI。',
-            '意識とAIが組み合わさること——それが、このコミュニティの1番の特徴であり、ビジョンそのものです。',
-            '制限や法則を通らない。平和で、パワフルで、無限の可能性に満ちている。',
-            '本当の自分の、とてつもなく豊かな制限のない意識で、無限の叡智で、この地球を生きる。',
-            '1番のワクワクを実現する自分になっていく。',
-            'AIというバックアップを使って、そんな僕たちの意識が反映されたサービス、システム、仕組み、形——それらから放たれる電波もまた、その意識の電波になっていく。',
-            '意識がシフトすると、ひらめきが変わる。ひらめきが変われば、創るものが変わる。',
-            'これが当たり前に起きていく——これが、僕たちの意識の持つ本来の力です。',
-            'それが、理想論ではなくリアリティを持って、起きていくコミュニティです。',
-        ],
-        examples: [
+        accentColor: '#1a1a3e',
+        items: [
             {
                 title: '手放しのワーク × AI実践を同時に行う',
                 detail: '意識をシフトさせながら、AIで具現化 → 圧倒的な速度で復活していく',
@@ -126,40 +105,40 @@ const uniquenessData: UniquenessItem[] = [
                 title: '精神的なシフトと物理的なシフトを同時に',
                 detail: '内側が変わる × 外側が変わる → もともと1つだったものを統合して生きる',
             },
-            {
-                title: '会員同士の実践事例の共有',
-                detail: 'Discord内で手放しの体験談、AI活用事例を共有 → 仲間の実践があなたを加速させる',
-            },
-            {
-                title: 'リアルイベント・交流会での統合体験',
-                detail: 'オンラインだけでなく、リアルでも繋がる → 1番のワクワクを生きる仲間と統合を体験',
-            },
         ],
-        sessionInfo: '',
     },
 ];
 
 export default function UniquenessSection() {
-    const [activeTab, setActiveTab] = useState(0);
-    const active = uniquenessData[activeTab];
-
     return (
-        <section className="relative py-24 sm:py-32">
+        <section className="relative py-24 sm:py-32" style={{ background: '#fafafa' }}>
+            {/* Background */}
             <div className="absolute inset-0 pointer-events-none">
                 <div
-                    className="absolute bottom-0 left-0 w-full h-px"
-                    style={{ background: 'linear-gradient(90deg, transparent, rgba(124,92,191,0.1), transparent)' }}
+                    className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full"
+                    style={{
+                        background: 'radial-gradient(circle, rgba(124,92,191,0.04) 0%, transparent 70%)',
+                    }}
+                />
+                <div
+                    className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full"
+                    style={{
+                        background: 'radial-gradient(circle, rgba(201,168,76,0.03) 0%, transparent 70%)',
+                    }}
                 />
             </div>
 
-            <div className="relative z-10 max-w-5xl mx-auto px-6">
+            <div className="relative z-10 max-w-3xl mx-auto px-6">
                 {/* Section heading */}
-                <motion.div {...fadeInUp} className="text-center mb-16">
-                    <p className="text-sm tracking-[0.2em] mb-4" style={{ color: '#c9a84c' }}>
+                <motion.div {...fadeInUp} className="text-center mb-12">
+                    <p
+                        className="text-xs tracking-[0.2em] mb-4"
+                        style={{ color: '#c9a84c', fontWeight: 500 }}
+                    >
                         UNIQUENESS
                     </p>
                     <h2
-                        className="text-2xl sm:text-3xl leading-relaxed mb-3"
+                        className="text-xl sm:text-2xl leading-relaxed mb-6"
                         style={{
                             fontFamily: '"Noto Serif JP", serif',
                             fontWeight: 600,
@@ -167,139 +146,96 @@ export default function UniquenessSection() {
                             letterSpacing: '0.04em',
                         }}
                     >
-                        なぜ、このコミュニティなのか？
+                        精神次元 × 物理次元を統合する
+                        <br />
+                        唯一無二のコミュニティ
                     </h2>
-                    <p className="text-lg" style={{ color: '#4a4a6a' }}>
-                        唯一無二の3つの独自性
-                    </p>
                     <div className="section-divider mt-8" />
                 </motion.div>
 
-                {/* Tab instruction hint */}
-                <motion.p
-                    {...fadeInUp}
-                    className="text-center text-xs mb-4"
-                    style={{ color: '#9a9ab0', letterSpacing: '0.05em' }}
-                >
-                    ▼ タップして切り替え
-                </motion.p>
-
-                {/* Tab buttons */}
-                <motion.div {...fadeInUp} className="flex flex-col sm:flex-row gap-0 mb-12 justify-center">
-                    {uniquenessData.map((item, idx) => (
-                        <button
-                            key={item.id}
-                            onClick={() => setActiveTab(idx)}
-                            className="relative flex items-center gap-3 px-6 sm:px-8 py-5 text-left transition-all duration-400 cursor-pointer group"
-                            style={{
-                                background: activeTab === idx
-                                    ? 'linear-gradient(180deg, rgba(124,92,191,0.06), rgba(124,92,191,0.02))'
-                                    : 'transparent',
-                                borderBottom: activeTab === idx
-                                    ? '3px solid #7c5cbf'
-                                    : '3px solid rgba(0,0,0,0.06)',
-                            }}
-                        >
-                            <span className="text-2xl">{item.icon}</span>
-                            <div>
-                                <span
-                                    className="text-xs tracking-widest font-medium"
-                                    style={{ color: activeTab === idx ? '#7c5cbf' : '#c9a84c' }}
-                                >
-                                    {item.label}
-                                </span>
-                                <p
-                                    className="text-sm mt-1 font-medium leading-snug"
-                                    style={{ color: activeTab === idx ? '#1a1a3e' : '#8a8aa0' }}
-                                >
-                                    {item.title}
-                                </p>
-                            </div>
-                            {/* Active indicator dot (mobile) */}
-                            {activeTab === idx && (
-                                <motion.div
-                                    layoutId="activeTabDot"
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full sm:hidden"
-                                    style={{ background: '#7c5cbf' }}
-                                />
-                            )}
-                        </button>
-                    ))}
+                {/* Description */}
+                <motion.div {...fadeInUp} className="mb-16">
+                    <div className="space-y-3">
+                        {descriptionLines.map((line, i) => (
+                            <p
+                                key={i}
+                                className="text-sm sm:text-base leading-[2] tracking-wide"
+                                style={{ color: '#4a4a6a' }}
+                            >
+                                {line}
+                            </p>
+                        ))}
+                    </div>
                 </motion.div>
 
-                {/* Tab content */}
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={active.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.5 }}
-                        className="max-w-3xl mx-auto"
-                    >
-                        {/* Title */}
-                        <h3
-                            className="text-xl sm:text-2xl mb-8 text-center leading-relaxed"
-                            style={{
-                                fontFamily: '"Noto Serif JP", serif',
-                                fontWeight: 600,
-                                color: '#1a1a3e',
-                            }}
+                {/* Category lists */}
+                <div className="space-y-12">
+                    {categories.map((cat, catIdx) => (
+                        <motion.div
+                            key={catIdx}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-50px' }}
+                            transition={{ duration: 0.8, delay: catIdx * 0.1 }}
                         >
-                            {active.title}
-                        </h3>
-
-                        {/* Description */}
-                        <div className="mb-10 space-y-3">
-                            {active.description.map((line, i) => (
-                                <p
-                                    key={i}
-                                    className="text-base leading-loose"
-                                    style={{ color: '#3a3a5a', letterSpacing: '0.02em' }}
+                            {/* Category header */}
+                            <div className="flex items-center gap-3 mb-6">
+                                <span className="text-xl">{cat.icon}</span>
+                                <h3
+                                    className="text-lg sm:text-xl font-semibold"
+                                    style={{
+                                        fontFamily: '"Noto Serif JP", serif',
+                                        color: cat.accentColor,
+                                        letterSpacing: '0.03em',
+                                    }}
                                 >
-                                    {line}
-                                </p>
-                            ))}
-                        </div>
+                                    {cat.label}
+                                </h3>
+                                <div
+                                    className="flex-1 h-px"
+                                    style={{ background: `${cat.accentColor}22` }}
+                                />
+                            </div>
 
-                        {/* Examples */}
-                        <div
-                            className="rounded-2xl p-6 sm:p-8 mb-6"
-                            style={{ background: 'rgba(250,250,252,1)', border: '1px solid rgba(124,92,191,0.08)' }}
-                        >
-                            <p className="text-sm font-medium mb-5" style={{ color: '#7c5cbf', letterSpacing: '0.1em' }}>
-                                具体例
-                            </p>
-                            <div className="space-y-5">
-                                {active.examples.map((ex, i) => (
-                                    <div key={i} className="flex gap-3">
-                                        <div
-                                            className="w-5 h-5 mt-1 rounded-md flex items-center justify-center text-xs flex-shrink-0"
-                                            style={{ background: 'rgba(124,92,191,0.1)', color: '#7c5cbf' }}
-                                        >
-                                            ✓
-                                        </div>
-                                        <div>
-                                            <p className="text-sm font-medium mb-1" style={{ color: '#1a1a3e' }}>
-                                                {ex.title}
-                                            </p>
-                                            <p className="text-sm leading-relaxed" style={{ color: '#6a6a8a' }}>
-                                                {ex.detail}
-                                            </p>
+                            {/* Items */}
+                            <div className="space-y-4">
+                                {cat.items.map((item, i) => (
+                                    <div
+                                        key={i}
+                                        className="rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md"
+                                        style={{
+                                            background: '#fff',
+                                            border: '1px solid rgba(0,0,0,0.04)',
+                                        }}
+                                    >
+                                        <div className="flex items-start gap-3">
+                                            <span
+                                                className="mt-0.5 text-sm"
+                                                style={{ color: cat.accentColor }}
+                                            >
+                                                ✓
+                                            </span>
+                                            <div>
+                                                <p
+                                                    className="text-sm font-medium mb-1"
+                                                    style={{ color: '#1a1a3e' }}
+                                                >
+                                                    {item.title}
+                                                </p>
+                                                <p
+                                                    className="text-xs leading-relaxed"
+                                                    style={{ color: '#8a8aaa' }}
+                                                >
+                                                    {item.detail}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                        </div>
-
-                        {/* Session info */}
-                        {active.sessionInfo && (
-                            <p className="text-center text-sm" style={{ color: '#9a9ab0' }}>
-                                {active.sessionInfo}
-                            </p>
-                        )}
-                    </motion.div>
-                </AnimatePresence>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     );
