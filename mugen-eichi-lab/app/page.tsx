@@ -1,5 +1,7 @@
 import React from 'react';
 import HeroSection from '@/components/consciousness-ai-lp/HeroSection';
+import UpcomingWorkshopsSection from '@/components/consciousness-ai-lp/UpcomingWorkshopsSection';
+import VideoSection from '@/components/consciousness-ai-lp/VideoSection';
 import StorySection from '@/components/consciousness-ai-lp/StorySection';
 import UniquenessSection from '@/components/consciousness-ai-lp/UniquenessSection';
 import TwoAxesSection from '@/components/consciousness-ai-lp/TwoAxesSection';
@@ -16,6 +18,8 @@ export default function Home() {
       style={{ fontFamily: '"Noto Sans JP", "Hiragino Sans", sans-serif' }}
     >
       <HeroSection />
+      <UpcomingWorkshopsSection />
+      <VideoSection />
       <StorySection />
       <UniquenessSection />
       <TwoAxesSection />
