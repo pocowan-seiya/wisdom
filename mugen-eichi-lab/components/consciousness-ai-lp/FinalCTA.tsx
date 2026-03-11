@@ -106,7 +106,7 @@ export default function FinalCTA() {
                     className="flex flex-col gap-4 max-w-md mx-auto"
                 >
                     <a
-                        href="#"
+                        href="https://pocowa.com/p/r/9ZIdX6RR"
                         className="block py-4 rounded-full text-center text-sm font-medium transition-all duration-500 hover:scale-[1.02] hover:shadow-lg"
                         style={{
                             border: '1.5px solid rgba(201,168,76,0.4)',
@@ -116,7 +116,7 @@ export default function FinalCTA() {
                         🌟 マニフェストプランで始める（¥3,480/月、初月無料）
                     </a>
                     <a
-                        href="#"
+                        href="https://pocowa.com/p/r/9ZIdX6RR"
                         className="block py-4 rounded-full text-center text-sm font-medium text-white transition-all duration-500 hover:scale-[1.02] hover:shadow-xl"
                         style={{
                             background: 'linear-gradient(135deg, #7c5cbf, #7c5cbfcc)',
@@ -126,7 +126,7 @@ export default function FinalCTA() {
                         🚀 アクセラレートプランで始める（¥6,800/月、初月無料）
                     </a>
                     <a
-                        href="#"
+                        href="https://pocowa.com/p/r/9ZIdX6RR"
                         className="block py-4 rounded-full text-center text-sm font-medium transition-all duration-500 hover:scale-[1.02] hover:shadow-lg"
                         style={{
                             border: '1.5px solid rgba(26,26,62,0.3)',
