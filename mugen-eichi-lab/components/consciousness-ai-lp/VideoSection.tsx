@@ -51,45 +51,14 @@ export default function VideoSection() {
                 >
                     {/* 16:9 aspect ratio container */}
                     <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                        {/* Placeholder — replace src with actual YouTube embed URL */}
-                        <div
-                            className="absolute inset-0 flex items-center justify-center"
-                            style={{
-                                background: 'linear-gradient(135deg, rgba(26,26,62,0.04), rgba(124,92,191,0.06), rgba(201,168,76,0.04))',
-                            }}
-                        >
-                            <div className="text-center">
-                                <div
-                                    className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
-                                    style={{
-                                        background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
-                                        boxShadow: '0 4px 20px rgba(124,92,191,0.3)',
-                                    }}
-                                >
-                                    <svg
-                                        className="w-8 h-8 ml-1"
-                                        fill="#fff"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
-                                <p className="text-sm" style={{ color: '#7c5cbf', fontWeight: 500 }}>
-                                    動画を準備中です
-                                </p>
-                            </div>
-                        </div>
-                        {/*
-                          YouTube動画が準備できたらこちらに差し替え:
-                          <iframe
+                        <iframe
                             className="absolute inset-0 w-full h-full"
-                            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                            src="https://player.vimeo.com/video/1172451368?h=5959a41e75"
                             title="無限叡智ラボ紹介動画"
                             frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="autoplay; fullscreen; picture-in-picture"
                             allowFullScreen
-                          />
-                        */}
+                        />
                     </div>
                 </motion.div>
 
