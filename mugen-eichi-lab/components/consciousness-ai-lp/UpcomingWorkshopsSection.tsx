@@ -48,9 +48,9 @@ const workshops: Workshop[] = [
         date: '4/25',
         day: '土',
         time: '15:00〜17:00',
-        title: 'AIのワーク',
+        title: 'Claude Cowork & Claude Code — 自分のビジネスを加速させる',
         description:
-            'テーマは後ほど発表します。',
+            'Claude CoworkとClaude Codeを使って、それぞれのビジネスを加速させることをテーマにした実演形式のワークショップです。',
         tag: 'AI実践',
         tagColor: '#c9a84c',
         confirmed: true,
