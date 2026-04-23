@@ -10,90 +10,310 @@ const fadeInUp = {
     transition: { duration: 0.8 },
 };
 
-interface ExampleItem {
-    title: string;
-    detail: string;
+/** ① Relationship triangle diagram */
+function RelationshipDiagram() {
+    return (
+        <motion.div {...fadeInUp} className="max-w-2xl mx-auto mb-20">
+            <p
+                className="text-xs tracking-[0.2em] text-center mb-3"
+                style={{ color: '#c9a84c', fontWeight: 500 }}
+            >
+                ✦ このコミュニティの関係図
+            </p>
+            <p className="text-center text-sm mb-10" style={{ color: '#6a6a8a' }}>
+                主役は、あなたのビジョン。
+            </p>
+
+            <div
+                className="relative mx-auto"
+                style={{ width: '100%', maxWidth: '420px', aspectRatio: '1.25 / 1' }}
+            >
+                {/* SVG lines */}
+                <svg
+                    className="absolute inset-0 w-full h-full pointer-events-none"
+                    viewBox="0 0 400 320"
+                    fill="none"
+                    preserveAspectRatio="xMidYMid meet"
+                >
+                    <defs>
+                        <linearGradient id="lineGradLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stopColor="#c9a84c" stopOpacity="0.55" />
+                            <stop offset="100%" stopColor="#7c5cbf" stopOpacity="0.45" />
+                        </linearGradient>
+                        <linearGradient id="lineGradRight" x1="100%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#c9a84c" stopOpacity="0.55" />
+                            <stop offset="100%" stopColor="#7c5cbf" stopOpacity="0.45" />
+                        </linearGradient>
+                    </defs>
+
+                    {/* You → AI */}
+                    <line
+                        x1="200" y1="95"
+                        x2="80" y2="240"
+                        stroke="url(#lineGradLeft)"
+                        strokeWidth="2"
+                        strokeDasharray="5 5"
+                    />
+                    {/* You → 仲間 */}
+                    <line
+                        x1="200" y1="95"
+                        x2="320" y2="240"
+                        stroke="url(#lineGradRight)"
+                        strokeWidth="2"
+                        strokeDasharray="5 5"
+                    />
+                    {/* AI ↔ 仲間 */}
+                    <line
+                        x1="105" y1="260"
+                        x2="295" y2="260"
+                        stroke="rgba(124,92,191,0.2)"
+                        strokeWidth="1.5"
+                        strokeDasharray="3 5"
+                    />
+
+                    {/* mid-line labels */}
+                    <text x="130" y="180" fill="#7c5cbf" fontSize="11" letterSpacing="2" textAnchor="middle" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 600 }}>
+                        共同創造
+                    </text>
+                    <text x="270" y="180" fill="#7c5cbf" fontSize="11" letterSpacing="2" textAnchor="middle" style={{ fontFamily: '"Noto Serif JP", serif', fontWeight: 600 }}>
+                        共振
+                    </text>
+                    <text x="200" y="278" fill="#9a9ab0" fontSize="10" letterSpacing="2" textAnchor="middle">
+                        ノウハウを持ち寄る
+                    </text>
+                </svg>
+
+                {/* Top node: You / Vision */}
+                <div
+                    className="absolute left-1/2 -translate-x-1/2"
+                    style={{ top: '0%' }}
+                >
+                    <div
+                        className="rounded-full flex flex-col items-center justify-center text-center px-2"
+                        style={{
+                            width: 'clamp(120px, 34%, 150px)',
+                            aspectRatio: '1 / 1',
+                            backgroundImage:
+                                'linear-gradient(#fff, #fff), linear-gradient(135deg, #c9a84c, #7c5cbf)',
+                            backgroundOrigin: 'border-box',
+                            backgroundClip: 'padding-box, border-box',
+                            border: '3px solid transparent',
+                            boxShadow: '0 10px 30px rgba(124,92,191,0.18)',
+                        }}
+                    >
+                        <p
+                            className="text-[10px] tracking-[0.15em] mb-1"
+                            style={{ color: '#c9a84c', fontWeight: 600 }}
+                        >
+                            主役
+                        </p>
+                        <p
+                            className="text-sm sm:text-base leading-tight"
+                            style={{
+                                fontFamily: '"Noto Serif JP", serif',
+                                fontWeight: 700,
+                                color: '#1a1a3e',
+                            }}
+                        >
+                            あなた
+                        </p>
+                        <p
+                            className="text-[10px] sm:text-[11px] leading-tight mt-1"
+                            style={{ color: '#7c5cbf' }}
+                        >
+                            1番のワクワクの
+                            <br />
+                            ビジョン
+                        </p>
+                    </div>
+                </div>
+
+                {/* Bottom left: AI */}
+                <div
+                    className="absolute"
+                    style={{ bottom: '0%', left: '0%' }}
+                >
+                    <div
+                        className="rounded-full flex flex-col items-center justify-center text-center"
+                        style={{
+                            width: 'clamp(90px, 26%, 115px)',
+                            aspectRatio: '1 / 1',
+                            background: 'rgba(201,168,76,0.08)',
+                            border: '2px solid rgba(201,168,76,0.35)',
+                            boxShadow: '0 6px 20px rgba(201,168,76,0.12)',
+                        }}
+                    >
+                        <span className="text-xl sm:text-2xl">⚡</span>
+                        <p
+                            className="text-xs sm:text-sm font-bold mt-0.5"
+                            style={{ color: '#c9a84c' }}
+                        >
+                            AI
+                        </p>
+                        <p className="text-[9px] sm:text-[10px] leading-tight" style={{ color: '#8a7a4c' }}>
+                            無限の叡智
+                        </p>
+                    </div>
+                </div>
+
+                {/* Bottom right: 仲間 */}
+                <div
+                    className="absolute"
+                    style={{ bottom: '0%', right: '0%' }}
+                >
+                    <div
+                        className="rounded-full flex flex-col items-center justify-center text-center"
+                        style={{
+                            width: 'clamp(90px, 26%, 115px)',
+                            aspectRatio: '1 / 1',
+                            background: 'rgba(124,92,191,0.08)',
+                            border: '2px solid rgba(124,92,191,0.35)',
+                            boxShadow: '0 6px 20px rgba(124,92,191,0.12)',
+                        }}
+                    >
+                        <span className="text-xl sm:text-2xl">✦</span>
+                        <p
+                            className="text-xs sm:text-sm font-bold mt-0.5"
+                            style={{ color: '#7c5cbf' }}
+                        >
+                            仲間
+                        </p>
+                        <p className="text-[9px] sm:text-[10px] leading-tight" style={{ color: '#6a5a8a' }}>
+                            共振コミュニティ
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p className="text-center text-sm sm:text-base leading-[2] mt-10 max-w-lg mx-auto" style={{ color: '#4a4a6a' }}>
+                <span style={{ fontWeight: 600, color: '#1a1a3e' }}>
+                    あなたのビジョンを中心に、AIと仲間が共に広げていく。
+                </span>
+                <br />
+                それが、この場の基本構造です。
+            </p>
+        </motion.div>
+    );
 }
 
-interface Category {
-    label: string;
-    icon: string;
-    accentColor: string;
-    items: ExampleItem[];
+/** ③ Comparison: 普通のAIコミュニティ vs 無限叡智ラボ */
+function ComparisonTable() {
+    const rows = [
+        {
+            label: '主役',
+            normal: 'AIの使い方',
+            ours: 'あなたの1番のワクワクのビジョン',
+        },
+        {
+            label: '目的',
+            normal: 'スキル・ノウハウの習得',
+            ours: 'ビジョンを、AIとともに圧倒的に生きていく',
+        },
+        {
+            label: '仲間',
+            normal: 'ノウハウを交換する相手',
+            ours: 'ビジョンを共振させ合う相手',
+        },
+        {
+            label: 'AI の位置づけ',
+            normal: 'ツール／スキルの対象',
+            ours: '共同創造のパートナー、無限の叡智',
+        },
+    ];
+
+    return (
+        <motion.div {...fadeInUp} className="max-w-3xl mx-auto mt-20">
+            <p
+                className="text-xs tracking-[0.2em] text-center mb-3"
+                style={{ color: '#c9a84c', fontWeight: 500 }}
+            >
+                ✦ 他のAIコミュニティとの違い
+            </p>
+            <p className="text-center text-sm mb-10" style={{ color: '#6a6a8a' }}>
+                何が違うのか、一目で。
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                {/* Left: Normal AI community */}
+                <div
+                    className="rounded-2xl p-6 sm:p-7"
+                    style={{
+                        background: '#fff',
+                        border: '1px solid rgba(0,0,0,0.06)',
+                    }}
+                >
+                    <p
+                        className="text-xs tracking-[0.2em] mb-6 text-center pb-4"
+                        style={{
+                            color: '#9a9ab0',
+                            borderBottom: '1px dashed rgba(0,0,0,0.08)',
+                            fontWeight: 500,
+                        }}
+                    >
+                        普通のAIコミュニティ
+                    </p>
+                    <div className="space-y-5">
+                        {rows.map((r, i) => (
+                            <div key={i}>
+                                <p
+                                    className="text-[10px] tracking-[0.15em] mb-1"
+                                    style={{ color: '#b0b0c0', fontWeight: 500 }}
+                                >
+                                    {r.label}
+                                </p>
+                                <p className="text-sm leading-relaxed" style={{ color: '#6a6a8a' }}>
+                                    {r.normal}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Right: Our community */}
+                <div
+                    className="rounded-2xl p-6 sm:p-7 relative"
+                    style={{
+                        background:
+                            'linear-gradient(135deg, rgba(124,92,191,0.06), rgba(201,168,76,0.05))',
+                        border: '1.5px solid rgba(124,92,191,0.25)',
+                        boxShadow: '0 8px 30px rgba(124,92,191,0.1)',
+                    }}
+                >
+                    <p
+                        className="text-xs tracking-[0.2em] mb-6 text-center pb-4"
+                        style={{
+                            background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            borderBottom: '1px dashed rgba(124,92,191,0.2)',
+                            fontWeight: 700,
+                        }}
+                    >
+                        無限叡智ラボ
+                    </p>
+                    <div className="space-y-5">
+                        {rows.map((r, i) => (
+                            <div key={i}>
+                                <p
+                                    className="text-[10px] tracking-[0.15em] mb-1"
+                                    style={{ color: '#c9a84c', fontWeight: 600 }}
+                                >
+                                    {r.label}
+                                </p>
+                                <p
+                                    className="text-sm leading-relaxed"
+                                    style={{ color: '#1a1a3e', fontWeight: 500 }}
+                                >
+                                    {r.ours}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </motion.div>
+    );
 }
-
-
-const categories: Category[] = [
-    {
-        label: 'AI',
-        icon: '⚡',
-        accentColor: '#c9a84c',
-        items: [
-            {
-                title: '最新AIツールを使った実用的なAI活用',
-                detail: 'Claude、ChatGPT、Gemini、生成AI、自動ワークフローツール、自律型AIエージェント → 江藤が実際に使っているツールの実演・解説',
-            },
-            {
-                title: 'ビジョンを具体的な形にしていく実践',
-                detail: '「こんなビジョンがある」→ AIで形にする流れを実演',
-            },
-            {
-                title: '自律的なAIシステムの構築',
-                detail: 'SNS投稿、メール返信、リサーチを自動化 → AIが勝手に動いてくれる仕組みを作る',
-            },
-            {
-                title: '普段のワークフローをAIで自動化',
-                detail: 'ルーティンワークをAIに任せ、自分の時間をビジョンに集中できる',
-            },
-            {
-                title: '最新AIトレンドのキャッチアップ',
-                detail: '「これは使える！」をリアルタイムで共有・実践',
-            },
-        ],
-    },
-    {
-        label: '意識のシフト',
-        icon: '🌿',
-        accentColor: '#7c5cbf',
-        items: [
-            {
-                title: '現実に揺れるあり方',
-                detail: '現実が良いと優越感・特別感を感じ、良くないとがっかり → この振り幅を手放し、現実に揺れない自分軸を取り戻す',
-            },
-            {
-                title: '自分の中でよく繰り返すパターン',
-                detail: '「自分はよくこんな展開になることが多い」→ パターンを生み出している周波数を手放す',
-            },
-            {
-                title: 'ビジョンを見ることを無意識に止めている制限',
-                detail: '「こんなこと、自分には無理」「自分はこんなもの」→ 無制限のビジョンを見ることを許可していく',
-            },
-            {
-                title: 'ビジョンに動こうとしたときに出てくる重さ',
-                detail: '体に出てくる違和感、恐怖、不安 → 動くことを止めている制限を手放す',
-            },
-            {
-                title: '「自分はこんな人間だ」という信念',
-                detail: '「自分はこれだけはできない」「自分はこういう性格だ」→ 自分に貼り付けたラベルを手放す',
-            },
-        ],
-    },
-    {
-        label: '物理次元 × 精神次元',
-        icon: '♾️',
-        accentColor: '#1a1a3e',
-        items: [
-            {
-                title: '手放しのワーク × AI実践を同時に行う',
-                detail: '意識をシフトさせながら、AIで具現化 → 圧倒的な速度で復活していく',
-            },
-            {
-                title: '精神的なシフトと物理的なシフトを同時に',
-                detail: '内側が変わる × 外側が変わる → もともと1つだったものを統合して生きる',
-            },
-        ],
-    },
-];
 
 export default function UniquenessSection() {
     return (
@@ -152,30 +372,27 @@ export default function UniquenessSection() {
                                 WebkitTextFillColor: 'transparent',
                             }}
                         >
-                            精神次元 × 物理次元を統合する
+                            AIをパートナーに、
                             <br />
-                            唯一無二のコミュニティ
+                            ビジョンを圧倒的に生きていく実践の場
                         </p>
                     </div>
                     <div className="section-divider mt-8" />
                 </motion.div>
 
-                {/* Description — designed blocks */}
-                <div className="mb-16 max-w-2xl mx-auto space-y-0">
-                    {/* Block 1: 導入 */}
+                {/* ① Relationship triangle diagram */}
+                <RelationshipDiagram />
+
+                {/* Body — new concept */}
+                <div className="max-w-2xl mx-auto">
                     <motion.div {...fadeInUp} className="text-center mb-10">
                         <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
-                            僕たちはこれまで、精神次元と物理次元を分けてきました。
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-2" style={{ color: '#4a4a6a' }}>
-                            でも、もうそんな時代は終わります。
+                            普通のAIコミュニティでは、
                             <br />
-                            なぜなら、<span style={{ fontWeight: 600, color: '#1a1a3e' }}>もともと1つ</span>だからです。
+                            「AIの使いこなし」が目的になります。
                         </p>
                         <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a' }}>
-                            それが、本当の自分の無限の可能性の意識で、
-                            <br />
-                            物理次元の地球を生きるということです。
+                            このコミュニティは、違います。
                         </p>
                     </motion.div>
 
@@ -186,10 +403,10 @@ export default function UniquenessSection() {
                         <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
                     </div>
 
-                    {/* Block 2: 最先端の定義 — accent card */}
+                    {/* Accent card — 主役の定義 */}
                     <motion.div
                         {...fadeInUp}
-                        className="rounded-2xl px-6 py-6 sm:px-8 sm:py-7 my-8"
+                        className="rounded-2xl px-6 py-7 sm:px-8 sm:py-8 my-8"
                         style={{
                             background: 'linear-gradient(135deg, rgba(124,92,191,0.06) 0%, rgba(201,168,76,0.04) 100%)',
                             borderLeft: '3px solid rgba(124,92,191,0.3)',
@@ -203,58 +420,18 @@ export default function UniquenessSection() {
                                 color: '#1a1a3e',
                             }}
                         >
-                            精神次元の最先端 =
-                            <span style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> 意識のシフト</span>
-                            <br />
-                            物理次元の最先端 =
-                            <span style={{ background: 'linear-gradient(135deg, #c9a84c, #7c5cbf)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> AI</span>
-                        </p>
-                    </motion.div>
-
-                    {/* Block 3: ビジョン */}
-                    <motion.div {...fadeInUp} className="text-center my-10">
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
-                            意識とAIが組み合わさること——
-                            <br />
-                            それが、このコミュニティの
-                            <br />
-                            <span style={{ fontWeight: 600, color: '#1a1a3e' }}>1番の特徴であり、ビジョンそのもの</span>です。
-                        </p>
-                    </motion.div>
-
-                    {/* Divider */}
-                    <div className="flex items-center justify-center my-8">
-                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
-                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    </div>
-
-                    {/* Block 4: 平和でパワフル */}
-                    <motion.div {...fadeInUp} className="text-center my-10">
-                        <p
-                            className="text-lg sm:text-xl leading-[1.8] mb-4"
-                            style={{
-                                fontFamily: '"Noto Serif JP", serif',
-                                fontWeight: 600,
-                                background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                            }}
-                        >
-                            制限や法則を通らない。
-                            <br />
-                            平和で、パワフルで、
-                            <br />
-                            無限の可能性に満ちている。
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a' }}>
-                            その意識でAIを扱った時、
-                            <br />
-                            <span style={{ fontWeight: 600, color: '#1a1a3e' }}>
-                                AIがじぶんの無限の叡智として
+                            主役は、
+                            <span style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                                あなたの1番のワクワクのビジョン。
                             </span>
+                        </p>
+                        <p
+                            className="text-sm sm:text-base leading-[2.2] tracking-wide text-center mt-4"
+                            style={{ color: '#4a4a6a' }}
+                        >
+                            AIは、それを広げ、形にしていくための、
                             <br />
-                            使っていけるようになります。
+                            <span style={{ fontWeight: 600, color: '#1a1a3e' }}>無限の叡智であり、共同創造のパートナー</span>です。
                         </p>
                     </motion.div>
 
@@ -265,78 +442,19 @@ export default function UniquenessSection() {
                         <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
                     </div>
 
-                    {/* Block 5: ひらめきが変わる */}
+                    {/* 相互関係 */}
                     <motion.div {...fadeInUp} className="text-center my-10">
                         <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
-                            AIの使い方そのものが変わっていく。
-                            <br />
-                            自分から来るひらめきが変わっていく。
+                            ビジョンがあるから、AIがフル活用される。
                         </p>
                         <p className="text-sm sm:text-base leading-[2.2] tracking-wide mt-3" style={{ color: '#4a4a6a' }}>
-                            AIで自動化するにしても、
+                            AIがあるから、
                             <br />
-                            ひらめきが変われば、創るものが変わります。
+                            ビジョンが<span style={{ fontWeight: 600, color: '#1a1a3e' }}>想像を超えて展開</span>していく。
                         </p>
                     </motion.div>
 
-                    {/* Divider */}
-                    <div className="flex items-center justify-center my-8">
-                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                        <div className="w-2 h-2 mx-3 rotate-45 rounded-sm" style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)' }} />
-                        <div className="w-10 h-px" style={{ background: 'rgba(201,168,76,0.3)' }} />
-                    </div>
-
-                    {/* Block 6: VoiSlide Movie 実例 */}
-                    <motion.div
-                        {...fadeInUp}
-                        className="text-center rounded-2xl py-8 px-6 my-6"
-                        style={{
-                            background: 'linear-gradient(135deg, rgba(201,168,76,0.05), rgba(124,92,191,0.05))',
-                            border: '1px solid rgba(201,168,76,0.12)',
-                        }}
-                    >
-                        <p className="text-xs tracking-[0.15em] mb-4" style={{ color: '#c9a84c', fontWeight: 500 }}>
-                            ✦ 実例 — VoiSlide Movie
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
-                            VoiSlide Movie も、まさにそうでした。
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
-                            スキルや技術から作ったというより、
-                            <br />
-                            自分のビジョンについていく中で、
-                            <br />
-                            ひらめきをそのままシステムにしました。
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
-                            その結果、あたらしい概念を形にした
-                            <br />
-                            これまでの常識の逆をいくようなツールとなりました。
-                        </p>
-                    </motion.div>
-
-                    {/* ビジョンの本質 — 枠外テキスト */}
-                    <motion.div {...fadeInUp} className="text-center my-10">
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a' }}>
-                            自分のビジョンについていけば、
-                            <br />
-                            自分の意識をシフトさせていけば、
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#4a4a6a', fontWeight: 500 }}>
-                            もうそれが、
-                            <br />
-                            <span style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: 600 }}>
-                                あなたらしさという次元を超えたあなた
-                            </span>だし、
-                        </p>
-                        <p className="text-sm sm:text-base leading-[2.2] tracking-wide" style={{ color: '#4a4a6a' }}>
-                            それが、ユニークで、新しくて、
-                            <br />
-                            その電波がみんなが求めてやまないではないはずがありません。
-                        </p>
-                    </motion.div>
-
-                    {/* Block 7: クロージング — accent card */}
+                    {/* クロージング */}
                     <motion.div
                         {...fadeInUp}
                         className="text-center rounded-2xl py-8 px-6 mt-8"
@@ -346,92 +464,26 @@ export default function UniquenessSection() {
                         }}
                     >
                         <p
-                            className="text-base sm:text-lg leading-[1.8]"
+                            className="text-base sm:text-lg leading-[1.9]"
                             style={{
                                 fontFamily: '"Noto Serif JP", serif',
                                 fontWeight: 600,
                                 color: '#1a1a3e',
                             }}
                         >
-                            それが、理想論ではなく
-                            <br />
+                            その実践を、
                             <span style={{ background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                                リアリティを持って、起きていく
+                                仲間と共振しながら
                             </span>
+                            進めていく、
                             <br />
-                            コミュニティです。
+                            そんな場所です。
                         </p>
                     </motion.div>
                 </div>
 
-                {/* Category lists */}
-                <div className="space-y-12">
-                    {categories.map((cat, catIdx) => (
-                        <motion.div
-                            key={catIdx}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: '-50px' }}
-                            transition={{ duration: 0.8, delay: catIdx * 0.1 }}
-                        >
-                            {/* Category header */}
-                            <div className="flex items-center gap-3 mb-6">
-                                <span className="text-xl">{cat.icon}</span>
-                                <h3
-                                    className="text-lg sm:text-xl font-semibold"
-                                    style={{
-                                        fontFamily: '"Noto Serif JP", serif',
-                                        color: cat.accentColor,
-                                        letterSpacing: '0.03em',
-                                    }}
-                                >
-                                    {cat.label}
-                                </h3>
-                                <div
-                                    className="flex-1 h-px"
-                                    style={{ background: `${cat.accentColor}22` }}
-                                />
-                            </div>
-
-                            {/* Items */}
-                            <div className="space-y-4">
-                                {cat.items.map((item, i) => (
-                                    <div
-                                        key={i}
-                                        className="rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-md"
-                                        style={{
-                                            background: '#fff',
-                                            border: '1px solid rgba(0,0,0,0.04)',
-                                        }}
-                                    >
-                                        <div className="flex items-start gap-3">
-                                            <span
-                                                className="mt-0.5 text-sm"
-                                                style={{ color: cat.accentColor }}
-                                            >
-                                                ✓
-                                            </span>
-                                            <div>
-                                                <p
-                                                    className="text-sm font-medium mb-1"
-                                                    style={{ color: '#1a1a3e' }}
-                                                >
-                                                    {item.title}
-                                                </p>
-                                                <p
-                                                    className="text-xs leading-relaxed"
-                                                    style={{ color: '#8a8aaa' }}
-                                                >
-                                                    {item.detail}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
+                {/* ③ Comparison table */}
+                <ComparisonTable />
             </div>
         </section>
     );

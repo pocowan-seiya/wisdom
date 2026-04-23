@@ -84,7 +84,7 @@ export default function HeroSection() {
                             background: 'rgba(124,92,191,0.04)',
                         }}
                     >
-                        AI × 意識 実践コミュニティ
+                        AI × ビジョン 実践コミュニティ
                     </span>
                 </motion.div>
 
@@ -138,10 +138,10 @@ export default function HeroSection() {
                         letterSpacing: '0.06em',
                     }}
                 >
-                    制限を手放し、無限の可能性の自分に復活する
+                    AIを無限の叡智として、
                     <br />
                     <span className="text-gradient-consciousness">
-                        最高のビジョンを、AIで軽やかに形にしていく
+                        1番のワクワクのビジョンを、圧倒的に生きていく。
                     </span>
                 </motion.p>
 
@@ -156,12 +156,10 @@ export default function HeroSection() {
                         className="text-sm sm:text-base leading-loose mx-auto max-w-xl"
                         style={{ color: '#5a5a7a', letterSpacing: '0.03em' }}
                     >
-                        見えない制限を手放し、じぶんの無限の叡智を復活し、
-                        <br className="hidden sm:block" />
-                        最高のビジョンを、AIとの共創で形にしていく
+                        AIとの共同創造で、じぶんを表していく実践コミュニティ。
                         <br />
                         <span style={{ fontWeight: 500, color: '#1a1a3e' }}>
-                            1番のワクワクを生きる実践の場
+                            受け取り合い、共振しながら、存在していく場。
                         </span>
                     </p>
                     <p
@@ -188,7 +186,7 @@ export default function HeroSection() {
                             letterSpacing: '0.05em',
                         }}
                     >
-                        🎁 今すぐ無限の叡智を復活させる（初月無料）
+                        ✨ 無限叡智ラボに参加する（初月無料）
                     </a>
                 </motion.div>
 

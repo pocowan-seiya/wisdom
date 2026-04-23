@@ -4,7 +4,6 @@ import UpcomingWorkshopsSection from '@/components/consciousness-ai-lp/UpcomingW
 import VideoSection from '@/components/consciousness-ai-lp/VideoSection';
 import StorySection from '@/components/consciousness-ai-lp/StorySection';
 import UniquenessSection from '@/components/consciousness-ai-lp/UniquenessSection';
-import StepsSection from '@/components/consciousness-ai-lp/StepsSection';
 import PlanDetailSection from '@/components/consciousness-ai-lp/PlanDetailSection';
 import PlansSection from '@/components/consciousness-ai-lp/PlansSection';
 import FinalCTA from '@/components/consciousness-ai-lp/FinalCTA';
@@ -21,7 +20,6 @@ export default function Home() {
       <VideoSection />
       <StorySection />
       <UniquenessSection />
-      <StepsSection />
       <PlanDetailSection />
       <PlansSection />
       <FinalCTA />

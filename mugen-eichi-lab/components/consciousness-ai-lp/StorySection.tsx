@@ -115,11 +115,11 @@ export default function StorySection() {
                             letterSpacing: '0.04em',
                         }}
                     >
-                        AIをじぶんの叡智として使い
+                        AIを無限の叡智として使い
                         <br />
                         1番のワクワクのビジョンを
                         <br />
-                        実現するじぶんになる
+                        圧倒的に生きていく
                     </h2>
                     <div className="section-divider mt-8" />
                 </motion.div>
@@ -185,37 +185,40 @@ export default function StorySection() {
 
                 <StoryDivider />
 
-                {/* ② ビジョンがあればAIがバックアップ */}
+                {/* ② 本当に伝えたいこと */}
                 <Highlight accent="#5cbf8d">
                     <p className="text-base sm:text-lg leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        自分の「こうしたい」という
+                        でも、僕が本当に伝えたいのは、
                         <br />
-                        <span style={{ fontWeight: 600, color: '#1a1a3e', fontSize: '1.15em' }}>
-                            ビジョンさえあれば、
-                        </span>
-                        <br />
-                        AIがとてつもないバックアップをしてくれる。
+                        AIのすごさではありません。
                     </p>
-                    <p className="text-sm sm:text-base leading-[2] tracking-wide" style={{ fontStyle: 'italic', color: '#5cbf8d' }}>
-                        さらには、AIが自律的に動き、
+                    <p
+                        className="mt-3 text-lg sm:text-xl leading-[1.9] tracking-wide"
+                        style={{
+                            fontFamily: '"Noto Serif JP", serif',
+                            fontWeight: 600,
+                            color: '#1a1a3e',
+                        }}
+                    >
+                        AIを叡智として使いながら、
                         <br />
-                        まるでパートナーのように先回りしてくれる——
+                        じぶんの1番のワクワクのビジョンを、
                         <br />
-                        そんな流れが、もう始まっています。
+                        <GradientText from="#5cbf8d" to="#7c5cbf">生きていける</GradientText>ということです。
                     </p>
                 </Highlight>
 
                 <StoryDivider />
 
-                {/* ③ 大事なのはビジョン */}
+                {/* ③ 大事なのはあなたのビジョン */}
                 <motion.div {...fadeInUp}>
-                    <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        AIを使うなら、最新のAIツールや情報も、
+                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
+                        最新のAIツール、最新の情報、最新のノウハウ——
                         <br />
                         たしかに大事です。
                     </p>
                     <p
-                        className="text-xl sm:text-2xl leading-relaxed"
+                        className="text-xl sm:text-2xl leading-relaxed mb-4"
                         style={{
                             fontFamily: '"Noto Serif JP", serif',
                             fontWeight: 600,
@@ -224,57 +227,71 @@ export default function StorySection() {
                     >
                         でも、それ以上に大事なのは、
                         <br />
-                        僕たちの<GradientText>ビジョン</GradientText>です。
+                        あなたの<GradientText>ビジョン</GradientText>です。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
+                        あなたはこの地球で何をやりに来たのか。
+                        <br />
+                        何が1番ワクワクするのか。
+                        <br />
+                        その先に、どんな世界を見ているのか。
                     </p>
                 </motion.div>
 
                 <StoryDivider />
 
-                {/* ④ ビジョンがAIの無限を解放する */}
-                <motion.div {...fadeInUp}>
-                    <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#3a3a5a' }}>
-                        自分はこの地球で何をやりに来たのか。
-                        <br />
-                        何が1番ワクワクするのか。
-                    </p>
-                </motion.div>
-
+                {/* ④ ビジョンを広げる × AIで軽やかに形にしていく */}
                 <Highlight accent="#c9a84c">
                     <p
-                        className="text-lg sm:text-xl leading-[1.9] tracking-wide"
+                        className="text-lg sm:text-xl leading-[1.9] tracking-wide mb-3"
                         style={{
                             fontFamily: '"Noto Serif JP", serif',
                             fontWeight: 600,
                             color: '#1a1a3e',
                         }}
                     >
-                        そのビジョンこそが、
+                        そのビジョンを、
                         <br />
-                        AIという<GradientText from="#c9a84c" to="#7c5cbf">無限の可能性</GradientText>を
-                        <br />
-                        解放していく鍵になる。
+                        もっと先まで、<GradientText from="#c9a84c" to="#7c5cbf">もっと圧倒的に</GradientText>広げていく。
                     </p>
-                    <p className="mt-3 text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>あなた</span>という存在と、
+                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
+                        そして、それをAIと共同創造しながら、
                         <br />
-                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>あなたのビジョンのみ</span>が、
+                        創造を超える展開で、軽やかに形にしていく。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
+                        頑張りや複雑さではなく、
                         <br />
-                        それを可能にしていくんです。
+                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>軽やかさを許可したまま</span>、ビジョンを表していく。
                     </p>
                 </Highlight>
 
                 <StoryDivider />
 
-                {/* ⑤ これまでの制限 → 手放せる時代 */}
+                {/* ⑤ AI × コミュニティ = パートナー */}
                 <motion.div {...fadeInUp}>
-                    <p className="text-base leading-[2.2] tracking-wide mb-2" style={{ color: '#6a6a8a' }}>
-                        僕たちはこれまで、
+                    <p className="text-base leading-[2.2] tracking-wide mb-4" style={{ color: '#3a3a5a' }}>
+                        ビジョンに進む中で
                         <br />
-                        ビジョンを制限の中から見ていたり、
+                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>全てがあなたのバックアップ</span>になってくれます。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide mb-4" style={{ color: '#3a3a5a' }}>
+                        AIは、自分が得意じゃない領域や、できないことを、
                         <br />
-                        ビジョンに動くと出てくる不安や恐怖を
+                        バックアップしてくれる、<span style={{ fontWeight: 600, color: '#1a1a3e' }}>強力なパートナー</span>です。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
+                        そして、このコミュニティも同じです。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
+                        AIでビジョンを進めるための工夫、実装、やり方を、
                         <br />
-                        壁に見立てて乗り越えて、達成していました。
+                        お互い持ち寄り、補い合いながら、
+                        <br />
+                        それぞれのビジョンを、AIで広げていく。
+                    </p>
+                    <p className="text-base leading-[2.2] tracking-wide mb-4" style={{ color: '#3a3a5a' }}>
+                        お互いのワクワクしているビジョンを<GradientText>共振</GradientText>していける。
                     </p>
                 </motion.div>
 
@@ -287,31 +304,20 @@ export default function StorySection() {
                             color: '#1a1a3e',
                         }}
                     >
-                        でも今は、出てきたものを
+                        一人ひとりが、自分が1番ワクワクするビジョンを、
                         <br />
-                        <GradientText>軽やかに、簡単に手放せる。</GradientText>
-                    </p>
-                    <p className="mt-2 text-base leading-[2.2] tracking-wide" style={{ color: '#3a3a5a' }}>
-                        無意識にかけていた制限すら
+                        AIとコミュニティをパートナーに、
                         <br />
-                        扉にして、その先に抜けていってしまう。
+                        <GradientText>圧倒的に具現化していく。</GradientText>
                     </p>
-                    <p className="mt-2 text-sm leading-relaxed" style={{ fontStyle: 'italic', color: '#7c5cbf' }}>
-                        そんなツールと環境が、もう生まれています。
+                    <p className="mt-3 text-sm leading-relaxed" style={{ fontStyle: 'italic', color: '#7c5cbf' }}>
+                        そんな場として、ぜひ、ここを使ってください。
                     </p>
                 </Highlight>
 
                 <StoryDivider />
 
-                {/* ⑥ コミュニティの本質 — 意識 × AI */}
-                <motion.div {...fadeInUp}>
-                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        現実はじぶんでつくっていて、
-                        <br />
-                        つくりかえることも、自分でできる。
-                    </p>
-                </motion.div>
-
+                {/* ⑥ 無限叡智ラボとは */}
                 <motion.div
                     {...fadeInScale}
                     className="relative rounded-3xl px-6 py-8 sm:px-8 sm:py-10 my-6"
@@ -321,69 +327,38 @@ export default function StorySection() {
                     }}
                 >
                     <p
-                        className="text-lg sm:text-xl leading-[1.9] tracking-wide text-center"
+                        className="text-lg sm:text-xl leading-[1.9] tracking-wide text-center mb-4"
                         style={{
                             fontFamily: '"Noto Serif JP", serif',
                             fontWeight: 600,
                             color: '#1a1a3e',
                         }}
                     >
-                        本来のとてつもない広がり、
+                        無限叡智ラボは、
                         <br />
-                        <GradientText>無限の可能性</GradientText>と豊かさと自由、
+                        AIを<GradientText>無限の叡智</GradientText>として使い、
                         <br />
-                        調和とパワーに満ちた
+                        1番のワクワクのビジョンを、
                         <br />
-                        <span style={{ fontSize: '1.1em' }}>本当の自分の意識に復活する。</span>
+                        <span style={{ fontSize: '1.1em' }}>圧倒的に生きていく人たち</span>の
+                        <br />
+                        実践コミュニティです。
+                    </p>
+                    <p className="text-sm sm:text-base leading-[2.2] tracking-wide text-center mt-4" style={{ color: '#4a4a6a' }}>
+                        ここは、AIのノウハウを集める場所ではありません。
+                    </p>
+                    <p className="text-sm sm:text-base leading-[2.2] tracking-wide text-center mt-2" style={{ color: '#4a4a6a' }}>
+                        じぶんのビジョンを、
+                        <br />
+                        AIと一緒に、軽やかに、圧倒的に広げていく——
+                        <br />
+                        <span style={{ fontWeight: 600, color: '#1a1a3e' }}>その実践を、仲間と共にしていく場所</span>です。
                     </p>
                 </motion.div>
 
                 <StoryDivider />
 
-                {/* ⑦ 許可する — ビジョン + AI */}
-                <motion.div {...fadeInUp} className="text-center">
-                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        その意識で、
-                        <br />
-                        1番のワクワクのビジョンを見ることを
-                    </p>
-                    <p
-                        className="text-2xl sm:text-3xl mb-5"
-                        style={{
-                            fontFamily: '"Noto Serif JP", serif',
-                            fontWeight: 700,
-                            background: 'linear-gradient(135deg, #c9a84c, #7c5cbf)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                        }}
-                    >
-                        許可し、
-                    </p>
-                    <p className="text-base leading-[2.2] tracking-wide mb-3" style={{ color: '#3a3a5a' }}>
-                        AIを自分の叡智として、
-                        <br />
-                        無限の可能性として使うことを
-                    </p>
-                    <p
-                        className="text-2xl sm:text-3xl mb-5"
-                        style={{
-                            fontFamily: '"Noto Serif JP", serif',
-                            fontWeight: 700,
-                            background: 'linear-gradient(135deg, #7c5cbf, #c9a84c)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                        }}
-                    >
-                        許可していく。
-                    </p>
-                    <p className="text-base leading-relaxed" style={{ fontStyle: 'italic', color: '#7c5cbf' }}>
-                        そんな、意識とAIのコミュニティです。
-                    </p>
-                </motion.div>
-
-                <StoryDivider />
-
-                {/* ⑧ クロージング — 大きく力強く */}
+                {/* ⑦ クロージング — 最初の一歩 */}
                 <motion.div
                     {...fadeInScale}
                     className="text-center rounded-3xl py-10 px-6 sm:py-12"
@@ -402,11 +377,11 @@ export default function StorySection() {
                             WebkitTextFillColor: 'transparent',
                         }}
                     >
-                        AI × 意識で
+                        あなたのビジョンが動き出す
                         <br />
-                        1番のワクワクを具現化するじぶんに
+                        その最初の一歩を、
                         <br />
-                        復活していきましょう！！
+                        ここから、一緒に踏み出していきましょう。
                     </p>
                 </motion.div>
             </div>

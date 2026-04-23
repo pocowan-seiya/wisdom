@@ -46,9 +46,9 @@ export default function FinalCTA() {
                             letterSpacing: '0.04em',
                         }}
                     >
-                        制限を手放し、無限の叡智を復活させ
+                        AIを無限の叡智として、
                         <br />
-                        最高のビジョンを、AIで軽やかに形にしていく
+                        1番のワクワクのビジョンを、圧倒的に生きていく。
                     </h2>
                     <p
                         className="text-lg sm:text-xl mb-3"
@@ -58,10 +58,10 @@ export default function FinalCTA() {
                             color: '#7c5cbf',
                         }}
                     >
-                        1番のワクワクを実現する自分になる
+                        軽やかさを許可したまま、ビジョンを広げ、形にしていく。
                     </p>
                     <p className="text-sm mb-10" style={{ color: '#9a9ab0' }}>
-                        最初の一歩を、今すぐ踏み出しましょう
+                        その実践を、ここから始めていく。
                     </p>
                     <div className="section-divider mb-10" />
                 </motion.div>
@@ -75,21 +75,21 @@ export default function FinalCTA() {
                         className="text-base leading-loose mb-6"
                         style={{ color: '#4a4a6a', letterSpacing: '0.03em' }}
                     >
-                        自分の意識が現実を創っている
+                        AIを無限の叡智として、共同創造する。
                         <br />
                         <br />
-                        見えない制限を手放し、無限の可能性の自分に復活する
+                        1番のワクワクのビジョンを、
                         <br />
-                        最高のビジョンを見て、AIで形にしていく
+                        軽やかに、圧倒的に、広げていく。
                         <br />
                         <br />
-                        手放しのワーク × AI実践で
+                        共振する仲間と、
                         <br />
-                        1番のワクワクを生きる
+                        お互いのビジョンを表していく。
                         <br />
                         <br />
                         <span style={{ fontWeight: 500, color: '#1a1a3e' }}>
-                            それを、あなたと一緒に実践しましょう
+                            その実践を、ここから一緒に始めましょう。
                         </span>
                     </p>
                     <p className="text-sm" style={{ color: '#c9a84c', fontWeight: 500, letterSpacing: '0.05em' }}>
@@ -113,7 +113,7 @@ export default function FinalCTA() {
                             color: '#c9a84c',
                         }}
                     >
-                        🌟 マニフェストプランで始める（¥3,480/月、初月無料）
+                        🌟 スタンダードプランで始める（¥3,480/月、初月無料）
                     </a>
                     <a
                         href="https://pocowa.com/p/r/9ZIdX6RR"
@@ -133,7 +133,7 @@ export default function FinalCTA() {
                             color: '#1a1a3e',
                         }}
                     >
-                        ♾️ インフィニットプランで始める（¥19,800/月、初月無料）
+                        💎 プライベートプランで始める（¥19,800/月、初月無料）
                     </a>
                 </motion.div>
             </div>
