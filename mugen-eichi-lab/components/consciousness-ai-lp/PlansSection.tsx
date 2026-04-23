@@ -349,7 +349,7 @@ export default function PlansSection() {
 
                                 {/* CTA */}
                                 <a
-                                    href="https://pocowa.com/p/r/9ZIdX6RR"
+                                    href="https://seiya-subsc-production.up.railway.app/"
                                     className="block w-full py-3.5 rounded-full text-center text-sm font-medium
                                                transition-all duration-500 hover:scale-[1.02] hover:shadow-lg"
                                     style={{
