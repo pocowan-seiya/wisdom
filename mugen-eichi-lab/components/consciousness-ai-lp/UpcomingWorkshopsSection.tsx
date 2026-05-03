@@ -23,36 +23,32 @@ interface Workshop {
 
 const workshops: Workshop[] = [
     {
-        date: '4/11',
+        date: '5/2',
         day: '土',
-        time: '15:00〜',
-        title: 'Claude Code ワークショップ',
+        time: '15:00〜17:00',
+        title: 'ChatGPT 5.5 を活用しきる — Codex と AIエージェント実践',
         description:
-            'Claude Codeの基本から応用まで、ハンズオン形式で実践するワークショップです。アーカイブでの参加も可能です。',
+            'ChatGPT 5.5 / Image 2 で注目を集める今、Codex（OpenAI のアプリ）と ChatGPT サブスクプラン経由で動かす AI エージェント（OpenClaw / Hermes など）を中心に扱います。意識のワーク回ではなく、AI 実装多めで進めます。',
         tag: 'アーカイブ配信中',
         tagColor: '#c9a84c',
         confirmed: true,
     },
     {
-        date: '4/25',
+        date: '5/16',
         day: '土',
         time: '13:00〜15:00',
-        title: '意識のワーク',
+        title: 'ワークショップ（テーマ後日発表）',
         description:
-            'テーマは後ほど発表します。',
-        tag: '意識のシフト',
-        tagColor: '#7c5cbf',
+            'テーマは後日発表します。',
         confirmed: true,
     },
     {
-        date: '4/25',
+        date: '5/30',
         day: '土',
-        time: '15:00〜17:00',
-        title: 'Claude Cowork & Claude Code — 自分のビジネスを加速させる',
+        time: '13:00〜15:00',
+        title: 'ワークショップ（テーマ後日発表）',
         description:
-            'Claude CoworkとClaude Codeを使って、それぞれのビジネスを加速させることをテーマにした実演形式のワークショップです。',
-        tag: 'AI実践',
-        tagColor: '#c9a84c',
+            'テーマは後日発表します。',
         confirmed: true,
     },
 ];
