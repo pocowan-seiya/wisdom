@@ -23,32 +23,12 @@ interface Workshop {
 
 const workshops: Workshop[] = [
     {
-        date: '5/2',
-        day: '土',
-        time: '15:00〜17:00',
-        title: 'ChatGPT 5.5 を活用しきる — Codex と AIエージェント実践',
-        description:
-            'ChatGPT 5.5 / Image 2 で注目を集める今、Codex（OpenAI のアプリ）と ChatGPT サブスクプラン経由で動かす AI エージェント（OpenClaw / Hermes など）を中心に扱います。意識のワーク回ではなく、AI 実装多めで進めます。',
-        tag: 'アーカイブ配信中',
-        tagColor: '#c9a84c',
-        confirmed: true,
-    },
-    {
-        date: '5/16',
+        date: '9/5',
         day: '土',
         time: '13:00〜15:00',
-        title: 'ワークショップ（テーマ後日発表）',
+        title: 'AIで音楽を作ろう — Suno で作る、あなたのビジネスのテーマソング',
         description:
-            'テーマは後日発表します。',
-        confirmed: true,
-    },
-    {
-        date: '5/30',
-        day: '土',
-        time: '13:00〜15:00',
-        title: 'ワークショップ（テーマ後日発表）',
-        description:
-            'テーマは後日発表します。',
+            '話題の音楽生成AI「Suno」を使って、その場でオリジナル曲を作ります。基本の使い方から「こんなこともできるの?!」という応用機能まで実例デモで紹介しつつ、前半は「朝起きるのが楽しみになる曲」のような気軽な1曲づくりで操作に慣れ、後半は自分のLPや商品情報をAIに渡して、商品・会社・あなたの活動のテーマソングを作ります。音楽の知識は不要です。',
         confirmed: true,
     },
 ];
